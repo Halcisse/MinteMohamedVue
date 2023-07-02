@@ -1,22 +1,40 @@
 <template>
+<div class="AccueilContent">
+<Header  />
     
-<section id="biographie">
-    <h1>PROFESSEUR SIDYA</h1>
-    <h2>Marabout de l'Afrique de l'Ouest</h2>
-    <p>"Lorem ipsum dolor sit amet, epteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt i</p>
-    <button> Je m'informe!</button>
-</section>
-<aside>
-    <img src="../assets/bleu bougie.jpg" alt="image de bougie bleu">
-</aside>
+    <section id="biographie">
+        <h1>PROFESSEUR SIDYA</h1>
+        <h2>Marabout de l'Afrique de l'Ouest</h2>
+        <p>"Lorem ipsum dolor sit amet, epteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt i</p>
+        <button> <router-link :to="{name: 'Infos'}">Je m'informe!</router-link></button>
+    </section>
+    <aside>
+        <img src="../assets/bleu bougie.jpg" alt="image de bougie bleu">
+    </aside>
+    
+    <Footer  />
 
+</div>
 </template>
 
 <script lang="ts" setup>
 
+import Header from '@/views/Header.vue'
+import Footer from '@/views/Footer.vue'
+
+
+    name: 'Accueil'
+
+
 </script>
 
 <style scoped>
+.AccueilContent{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 903px
+}
 #biographie{
     position: absolute;
     top: 320px;

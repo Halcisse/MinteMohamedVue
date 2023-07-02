@@ -5,10 +5,10 @@
             <!-- <i class="fa-solid fa-book-open"></i> -->
             <h1>PROFESSEUR SIDYA</h1>
             <div class="menu">
-                 <a href="./App.vue">ACCUEIL</a>
-                 <a href="./Prestations.vue">PRESTATIONS</a>
-                 <a href="./Contact.vue">CONTACT</a>
-                 <a href="./EnSavoirPlus.vue">EN SAVOIR PLUS</a>
+                <router-link :to="{name: 'Accueil'}">Accueil</router-link>
+                <router-link :to="{name: 'Prestations'}">Prestations</router-link>
+                <router-link :to="{name: 'Contact'}">Contact</router-link>
+                <router-link :to="{name: 'Infos'}">EN SAVOIR PLUS</router-link>
             </div>
         </div>
 
