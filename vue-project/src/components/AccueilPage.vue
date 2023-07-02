@@ -1,0 +1,63 @@
+<template>
+    
+<section id="biographie">
+    <h1>PROFESSEUR SIDYA</h1>
+    <h2>Marabout de l'Afrique de l'Ouest</h2>
+    <p>"Lorem ipsum dolor sit amet, epteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt i</p>
+    <button> Je m'informe!</button>
+</section>
+<aside>
+    <img src="../assets/bleu bougie.jpg" alt="image de bougie bleu">
+</aside>
+
+</template>
+
+<script lang="ts" setup>
+
+</script>
+
+<style scoped>
+#biographie{
+    position: absolute;
+    top: 320px;
+}
+p{
+    font-size: 19px;
+    color: white;
+    max-width: 44%;
+ 
+   
+}
+h1{
+    color: rgb(150, 176, 248);
+    margin: 0 0 19px 0 ;
+    
+}
+h2{
+    font-style: italic;
+    color: white;
+    margin-bottom: 45px;
+    /* margin-top: 0; */
+}
+button{
+    position: fixed;
+    left: 310px;
+    width: 187px;
+    height: 61px;
+    border-radius: 344%;
+    background-color: rgb(150, 176, 248);
+    font-family: 'Satisfy', cursive;
+    color: white;
+    font-size: 16px;
+    border: none;
+}
+img{
+    position: absolute;
+    right: 340px;
+    bottom: 390px;
+    width: 560px;
+    height: 340px;
+    border-radius: 19px;
+}
+
+</style>

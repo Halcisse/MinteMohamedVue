@@ -1,0 +1,69 @@
+<template>
+    <header>
+        <div id="ellipse"></div>
+        <div class="headerBar">
+            <!-- <i class="fa-solid fa-book-open"></i> -->
+            <h1>PROFESSEUR SIDYA</h1>
+            <div class="menu">
+                 <a href="./App.vue">ACCUEIL</a>
+                 <a href="./Prestations.vue">PRESTATIONS</a>
+                 <a href="./Contact.vue">CONTACT</a>
+                 <a href="./EnSavoirPlus.vue">EN SAVOIR PLUS</a>
+            </div>
+        </div>
+
+    </header>
+
+</template>
+
+<script lang="ts" setup>
+
+</script>
+
+<style scoped>
+.headerBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+h1{
+   
+    font-size: 17px;
+    color: white;
+   
+}
+.menu{
+    z-index: 1;
+    display: flex;
+    padding: 8px;
+    width: 50%;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color: white;
+ 
+}
+a:hover{
+
+   color: rgb(14, 2, 63);
+   font-weight: bold;
+    
+}
+#ellipse{
+    position: fixed;
+    top: -530px;
+    left: 560px;
+    background-color: rgb(150, 176, 248);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    
+    
+} 
+  
+
+</style>
