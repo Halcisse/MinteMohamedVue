@@ -22,10 +22,6 @@
 import Header from '@/views/Header.vue'
 import Footer from '@/views/Footer.vue'
 
-
-    name: 'Accueil'
-
-
 </script>
 
 <style scoped>
@@ -76,6 +72,7 @@ img{
     width: 560px;
     height: 340px;
     border-radius: 19px;
+    box-shadow: inset 0 0 1em rgb(14, 2, 63), 0 0 2em rgb(14, 2, 63);
 }
 
 </style>

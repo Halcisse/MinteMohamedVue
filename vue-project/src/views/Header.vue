@@ -37,9 +37,11 @@ h1{
 .menu{
     z-index: 1;
     display: flex;
+    justify-content: space-between;
     padding: 8px;
     width: 50%;
-    justify-content: space-between;
+    font-size: 19px;
+    
 }
 a{
     text-decoration: none;
@@ -60,6 +62,7 @@ a:hover{
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    box-shadow: inset 0 0 1em rgb(14, 2, 63), 0 0 2em rgb(150, 176, 248);
 
     
     
