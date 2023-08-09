@@ -1,6 +1,6 @@
 <template>
 <div class="AccueilContent">
-<Header  />
+<!-- <TheHeader  /> -->
     
     <section id="biographie">
         <h1>PROFESSEUR SIDYA</h1>
@@ -12,15 +12,15 @@
         <img src="../assets/bleu bougie.jpg" alt="image de bougie bleu">
     </aside>
     
-    <Footer  />
+    <!-- <TheFooter  /> -->
 
 </div>
 </template>
 
 <script lang="ts" setup>
 
-import Header from '@/views/Header.vue'
-import Footer from '@/views/Footer.vue'
+// import TheHeader from '@/views/Header.vue'
+// import TheFooter from '@/views/Footer.vue'
 
 </script>
 
@@ -29,7 +29,7 @@ import Footer from '@/views/Footer.vue'
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-height: 903px
+margin: 10px 25px ; 
 }
 #biographie{
     position: absolute;

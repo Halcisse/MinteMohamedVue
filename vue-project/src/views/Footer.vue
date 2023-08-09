@@ -14,22 +14,16 @@
 <style scoped>
 
 footer{
-    /* background-color: red; */
     display: flex;
     justify-content: center;
-    border-top: 2px solid rgb(150, 176, 248);
-    
-    
+    border-top: 2px solid rgb(150, 176, 248);    
 }
 .footerText{
-    /* background-color: green; */
+
     margin: 0;
     font-size: 11px;
     color:rgb(150, 176, 248);
    
-    /* width: 100%; */
-
-
 }
 h3{
     margin:0 ;

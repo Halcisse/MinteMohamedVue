@@ -2,7 +2,6 @@
     <header>
         <div id="ellipse"></div>
         <div class="headerBar">
-            <!-- <i class="fa-solid fa-book-open"></i> -->
             <h1>PROFESSEUR SIDYA</h1>
             <div class="menu">
                 <router-link :to="{name: 'Accueil'}">Accueil</router-link>
@@ -21,11 +20,24 @@
 </script>
 
 <style scoped>
+#ellipse{
+    position: fixed;
+    top: -530px;
+    left: 560px;
+    background-color: rgb(150, 176, 248);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: inset 0 0 1em rgb(14, 2, 63), 0 0 2em rgb(150, 176, 248);
+
+    
+    
+} 
 .headerBar{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    margin : 0 25px;
     
 }
 h1{
@@ -54,19 +66,7 @@ a:hover{
    font-weight: bold;
     
 }
-#ellipse{
-    position: fixed;
-    top: -530px;
-    left: 560px;
-    background-color: rgb(150, 176, 248);
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    box-shadow: inset 0 0 1em rgb(14, 2, 63), 0 0 2em rgb(150, 176, 248);
 
-    
-    
-} 
   
 
 </style>
