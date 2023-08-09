@@ -7,7 +7,6 @@
                 <router-link :to="{name: 'Accueil'}">Accueil</router-link>
                 <router-link :to="{name: 'Prestations'}">Prestations</router-link>
                 <router-link :to="{name: 'Contact'}">Contact</router-link>
-                <router-link :to="{name: 'Infos'}">EN SAVOIR PLUS</router-link>
             </div>
         </div>
 
@@ -49,7 +48,7 @@ h1{
 .menu{
     z-index: 1;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 8px;
     width: 50%;
     font-size: 19px;
