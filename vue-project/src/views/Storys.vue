@@ -1,7 +1,7 @@
 <template>
     <div class="temoignages">
         <div class="title">
-            <h1> TEMOIGAGNES</h1>
+            <h1>TÉMOIGNAGES</h1>
             <h2>~~ Les clients qui nous ont fais confiane ~~</h2>
         </div>
         <ul class="cardContent">

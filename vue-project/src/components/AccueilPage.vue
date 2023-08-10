@@ -16,6 +16,11 @@
         </aside>
         <Story class=story />
         <ContactBar class="ContactBar" />
+        <div class="toContactPage">
+            <p>Vous pouvez aussi nous contacter via le formulaire en cliquant
+                <router-link :to="{ name: 'Contact' }">ICI !</router-link>
+            </p>
+        </div>
 
     </div>
 </template>
@@ -32,6 +37,7 @@ import ContactBar from '@/views/ContactBar.vue';
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    /* align-items: center; */
     margin: 10px 25px;
 
 }
@@ -93,10 +99,18 @@ aside {
 }
 
 .story {
-    margin-bottom: 85px;
+    margin-bottom: 190px;
 }
 .ContactBar{
-margin-bottom: 30px;
+margin-bottom: 80px;
+}
+.toContactPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* font-style: italic; */
+    font-size: 22px;
+    width: 100%;
 }
 
 </style>
