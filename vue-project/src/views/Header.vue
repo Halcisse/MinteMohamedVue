@@ -4,9 +4,9 @@
         <div class="headerBar">
             <h1>PROFESSEUR SIDYA</h1>
             <div class="menu">
-                <router-link :to="{name: 'Accueil'}">Accueil</router-link>
-                <router-link :to="{name: 'Prestations'}">Prestations</router-link>
-                <router-link :to="{name: 'Contact'}">Contact</router-link>
+                <router-link :to="{name: 'Accueil'}">ACCUEIL</router-link>
+                <router-link :to="{name: 'Prestations'}">PRESTATIONS</router-link>
+                <router-link :to="{name: 'Contact'}">CONTACT</router-link>
             </div>
         </div>
 
@@ -52,6 +52,7 @@ h1{
     padding: 8px;
     width: 50%;
     font-size: 19px;
+    letter-spacing: 2px;
     
 }
 a{

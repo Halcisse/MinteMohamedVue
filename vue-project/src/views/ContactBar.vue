@@ -1,18 +1,18 @@
 <template>
     <div class="contactBar">
-        <h1>CONTACTEZ-NOUS!</h1>
+        <h1> CONTACTEZ-NOUS </h1>
         <h2> ~~ Joignable 24/24h ~~ Consulations à distance possible ~~ </h2>
         <div class="ContactCard">
             <div class=" card email">
-                <div class="title">Par mail</div>
-                <email>
+                <div class="title"> <font-awesome-icon :icon="['fas', 'at']" />   Par mail</div>
+                <div class="email">
                     <a href="mailto:halimatou.cisse@gmail.com">
                         Cliquez ici pour envoyer un email!
                     </a>
-                </email>
+                </div>
             </div>
             <div class="card telephone">
-                <div class="title">Par téléphone</div>
+                <div class="title"> <font-awesome-icon icon="phone" />      Par téléphone</div>
                 <div class="phoneNumber">
                     <a href="tel:+33673498904">06.73.49.89.04</a>
                 </div>

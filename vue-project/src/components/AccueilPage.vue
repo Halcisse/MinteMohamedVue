@@ -71,18 +71,32 @@ h2 {
 
 button {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     left: 310px;
     width: 287px;
     height: 91px;
-    border-radius: 344%;
+    border-radius: 55px;
     background-color: rgb(150, 176, 248);
     font-family: 'Satisfy', cursive;
     color: white;
-    font-size: 22px;
+    font-size: 33px;
+    letter-spacing: 2px;
+    /* box-shadow: 16px 14px 20px red; */
+    overflow: hidden;
     border: none;
 
 
 }
+
+button:hover,
+button:focus {
+    color: rgb(14, 2, 63);
+    background-color: white;
+    box-shadow: 10px 5px 5px rgb(150, 176, 248);
+}
+
 
 img {
     position: absolute;
@@ -101,10 +115,12 @@ aside {
 .story {
     margin-bottom: 190px;
 }
-.ContactBar{
-margin-bottom: 80px;
+
+.ContactBar {
+    margin-bottom: 80px;
 }
-.toContactPage{
+
+.toContactPage {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,5 +128,4 @@ margin-bottom: 80px;
     font-size: 22px;
     width: 100%;
 }
-
 </style>

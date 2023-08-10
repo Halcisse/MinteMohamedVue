@@ -2,25 +2,58 @@
     <div class="temoignages">
         <div class="title">
             <h1>TÉMOIGNAGES</h1>
-            <h2>~~ Les clients qui nous ont fais confiane ~~</h2>
+            <h2>~~ Les clients qui nous ont fais confiance ~~</h2>
         </div>
         <div class="caroussel">
             <div class="slides">
                 <div class="storycard">
-                    <p class="name">Name1</p>
-                    <p class="story">Story</p>
+                    <p class="name">Magalie M.</p>
+                    <div class="stars">
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                    </div>
+                    <p class="story">
+                        J'ai contacté Professeur Sidya lorsque mon copain de longue date m'a quittée pour une autre. Grâce à
+                        son travail, Mr est revenus à moi plus amoureux que jamais en seulement quelques jours! Je
+                        recommande!
+                    </p>
                 </div>
                 <div class="storycard">
-                    <p class="name">Name2</p>
-                    <p class="story">Story</p>
+                    <p class="name">Benoit V.</p>
+                    <div class="stars">
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                    </div>
+                    <p class="story">
+                        J'ai contacté Professeur Sidya lorsque mon copain de longue date m'a quittée pour une autre. Grâce à
+                        son travail, Mr est revenus à moi plus amoureux que jamais en seulement quelques jours! Je
+                        recommande!</p>
                 </div>
                 <div class="storycard">
-                    <p class="name">Name3</p>
-                    <p class="story">Story</p>
+                    <p class="name">Salima B.</p>
+                    <div class="stars">
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                    </div>
+                    <p class="story">
+                        J'ai contacté Professeur Sidya lorsque mon copain de longue date m'a quittée pour une autre. Grâce à
+                        son travail, Mr est revenus à moi plus amoureux que jamais en seulement quelques jours! Je
+                        recommande!</p>
                 </div>
                 <div class="storycard">
-                    <p class="name">Name4</p>
-                    <p class="story">Story</p>
+                    <p class="name">Ornella P.</p>
+                    <div class="stars">
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                    </div>
+                    <p class="story">
+                        J'ai contacté Professeur Sidya lorsque mon copain de longue date m'a quittée pour une autre. Grâce à
+                        son travail, Mr est revenus à moi plus amoureux que jamais en seulement quelques jours! Je
+                        recommande!</p>
                 </div>
             </div>
         </div>
@@ -28,41 +61,26 @@
 </template>
 
 
-<script lang="ts" >
-import { defineComponent, transformVNodeArgs } from 'vue';
-export default defineComponent({
-    // data() {
-    //     return {
-    //         SlideShow: 1
-    //     }
-    // },
-    // mounted() {
-    //     setInterval(() => {
-    //         if (this.SlideShow == 4) {
-    //             this.SlideShow = 1
-    //         } else {
-    //             this.SlideShow++
-    //         }
-    //     }, 5000)
+<script lang="ts" setup>
 
-    // }
-})
+
 
 
 </script>
 
 <style scoped>
-.temoignages{
+.temoignages {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .title {
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+
 }
 
 .caroussel {
@@ -83,7 +101,6 @@ export default defineComponent({
     text-align: center;
     padding: 5px;
     text-decoration: none;
-    border: 2px solid white;
     border-radius: 10%;
     /* margin: 0 55px; */
     width: 490px;
@@ -103,26 +120,41 @@ h2 {
     position: relative;
     margin-top: 0;
 }
-.slides{
-    display: flex;
-    animation: 30s Glisse infinite;
-    
+
+p {
+    font-style: italic;
+
 }
 
-@keyframes Glisse{
-    0%{
+font-awesome-icon {
+    color: white;
+    background-color: red;
+}
+
+.slides {
+    display: flex;
+    animation: 30s Glisse infinite;
+
+}
+
+@keyframes Glisse {
+    0% {
         transform: translateX(0);
     }
-    27%{
+
+    33% {
         transform: translateX(-503px);
     }
-    53%{
+
+    59% {
         transform: translateX(-1006px);
     }
-    78%{
+
+    83% {
         transform: translateX(-1509px);
     }
-    100%{
+
+    100% {
         transform: translateX(0);
     }
 }
