@@ -74,6 +74,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(150, 176, 248);
 }
 
 .title {
@@ -119,6 +120,7 @@ h1 {
 h2 {
     position: relative;
     margin-top: 0;
+    color:rgb(14, 2, 63);
 }
 
 p {
@@ -127,7 +129,7 @@ p {
 }
 
 font-awesome-icon {
-    color: white;
+    color:rgb(14, 2, 63);
     background-color: red;
 }
 

@@ -1,17 +1,15 @@
 <template>
     <header>
-        <div id="ellipse"></div>
         <div class="headerBar">
             <h1>PROFESSEUR SIDYA</h1>
             <div class="menu">
-                <router-link :to="{name: 'Accueil'}">ACCUEIL</router-link>
-                <router-link :to="{name: 'Prestations'}">PRESTATIONS</router-link>
-                <router-link :to="{name: 'Contact'}">CONTACT</router-link>
+                <router-link :to="{ name: 'Accueil' }">ACCUEIL</router-link>
+                <router-link :to="{ name: 'Prestations' }">PRESTATIONS</router-link>
+                <router-link :to="{ name: 'Contact' }">CONTACT</router-link>
             </div>
         </div>
 
     </header>
-
 </template>
 
 <script lang="ts" setup>
@@ -19,33 +17,24 @@
 </script>
 
 <style scoped>
-#ellipse{
-    position: fixed;
-    top: -530px;
-    left: 560px;
-    background-color: rgb(150, 176, 248);
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    box-shadow: inset 0 0 1em rgb(14, 2, 63), 0 0 2em rgb(150, 176, 248);
-
-    
-    
-} 
-.headerBar{
+.headerBar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin : 0 25px;
-    
-}
-h1{
+    background-color: rgb(14, 2, 63);
    
+
+}
+
+h1 {
+
     font-size: 17px;
     color: white;
-   
+    margin-left: 18px;
+
 }
-.menu{
+
+.menu {
     z-index: 1;
     display: flex;
     justify-content: space-around;
@@ -53,20 +42,19 @@ h1{
     width: 50%;
     font-size: 19px;
     letter-spacing: 2px;
-    
+
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
- 
-}
-a:hover{
 
-   color: rgb(14, 2, 63);
-   font-weight: bold;
-    
 }
 
-  
+a:hover {
 
+    color: rgb(150, 176, 248);
+    font-weight: bold;
+
+}
 </style>

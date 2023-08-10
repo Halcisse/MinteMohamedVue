@@ -16,11 +16,7 @@
         </aside>
         <Story class=story />
         <ContactBar class="ContactBar" />
-        <div class="toContactPage">
-            <p>Vous pouvez aussi nous contacter via le formulaire en cliquant
-                <router-link :to="{ name: 'Contact' }">ICI !</router-link>
-            </p>
-        </div>
+
 
     </div>
 </template>
@@ -38,7 +34,8 @@ import ContactBar from '@/views/ContactBar.vue';
     flex-direction: column;
     justify-content: space-around;
     /* align-items: center; */
-    margin: 10px 25px;
+    /* margin: 10px 25px; */
+    background-color: white;
 
 }
 
@@ -57,18 +54,23 @@ p {
 }
 
 h1 {
-    color: rgb(150, 176, 248);
-    margin: 0 0 19px 0;
+    color: rgb(14, 2, 63);
+    margin: 0 0 19px 26px;
 
 }
 
 h2 {
     font-style: italic;
-    color: white;
+    color: rgb(14, 2, 63);
     margin-bottom: 45px;
-    /* margin-top: 0; */
+    margin-left: 26px;
+    
 }
 
+p{
+    color: rgb(150, 176, 248);
+    margin-left: 26px;
+}
 button {
     position: absolute;
     display: flex;
@@ -78,7 +80,7 @@ button {
     width: 287px;
     height: 91px;
     border-radius: 55px;
-    background-color: rgb(150, 176, 248);
+    background-color: rgb(14, 2, 63);
     font-family: 'Satisfy', cursive;
     color: white;
     font-size: 33px;
@@ -120,12 +122,6 @@ aside {
     margin-bottom: 80px;
 }
 
-.toContactPage {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* font-style: italic; */
-    font-size: 22px;
-    width: 100%;
-}
+
+
 </style>

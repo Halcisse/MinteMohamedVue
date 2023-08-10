@@ -16,7 +16,7 @@
 footer{
     display: flex;
     justify-content: center;
-    border-top: 2px solid rgb(150, 176, 248);    
+     
 }
 .footerText{
 

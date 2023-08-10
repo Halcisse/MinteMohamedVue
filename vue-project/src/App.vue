@@ -20,7 +20,8 @@ import TheFooter from '@/views/Footer.vue'
 body {
   font-family: 'Satisfy', cursive;
   color: white;
-  background-color: rgb(14, 2, 63);
+  margin: 0;
+  /* background-color: rgb(14, 2, 63); */
 }
 
 .app-content {
@@ -34,6 +35,7 @@ body {
 
 .header {
   grid-area: header;
+  
 }
 
 .router {
@@ -46,7 +48,7 @@ body {
 
 h1 {
   color: rgb(150, 176, 248);
-  margin: 0 0 19px 0;
+  /* margin: 0 0 19px 0; */
 
 }
 
