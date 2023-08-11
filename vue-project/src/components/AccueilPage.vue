@@ -54,7 +54,7 @@ p {
     align-items: center;
     font-size: 19px;
     max-width: 75%;
-    margin-bottom: 10vh;
+    /* margin-bottom: 10vh; */
 
 
 }
@@ -124,9 +124,9 @@ aside {
 }
 
 .story {
-    margin-bottom: 190px;
+    margin-bottom: 50px;
 }
 
 .ContactBar {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }</style>

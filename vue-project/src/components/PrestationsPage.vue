@@ -1,7 +1,7 @@
 <template>
     <div class="PrestationsContent">
         <h1>Prestations page</h1>
-        <ContactBar />
+        <ContactBar class="ContactBar"/>
     </div>
 </template>
 
@@ -17,5 +17,8 @@ import ContactBar from '@/views/ContactBar.vue';
     flex-direction: column;
     justify-content: space-between;
 
+}
+.ContactBar {
+    margin-bottom: 40px;
 }
 </style>

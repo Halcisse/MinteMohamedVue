@@ -104,7 +104,6 @@
     padding: 5px;
     text-decoration: none;
     border-radius: 10%;
-    /* margin: 0 55px; */
     width: 490px;
     height: 299px;
     list-style-type: none;
@@ -112,10 +111,11 @@
 
 }
 
+
 h1 {
     color: white;
     position: relative;
-    margin-bottom: 10px;
+    
 }
 
 h2 {

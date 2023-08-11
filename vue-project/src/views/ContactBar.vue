@@ -68,12 +68,12 @@
 h1 {
     margin-top: 0;
     color: rgb(14, 2, 63);
-    margin-bottom: 25px;
+
 }
 
 h2 {
     margin-top: 0;
-    margin-bottom: 7vh;
+
     color: rgb(150, 176, 248);
 }
 
@@ -83,7 +83,7 @@ p {
 
 .title {
     color: rgb(150, 176, 248);
-    border-bottom: 40px;
+    /* border-bottom: 40px; */
     font-size: 24px;
 }
 
