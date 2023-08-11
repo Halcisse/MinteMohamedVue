@@ -3,11 +3,17 @@
         <section id="biographie">
             <h1>PROFESSEUR SIDYA</h1>
             <h2>~~ Marabout de l'Afrique de l'Ouest ~~</h2>
-            <p>"Lorem ipsum dolor sit amet, epteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt i</p>
+            <p>Bienvenue sur le site du Professeur Sydia, Marabout Voyant Médium et spécialiste du retour affectif. <br>
+                Il est une figure incontournable des marabouts de France, notamment connu pour la précision de ses
+                prédictions et
+                la qualité de son accompagnement. <br>
+                Il a appris dès l’enfance, les techniques transmises de génération en génération par ses aînés, et les a
+                perfectionné depuis son arrivée en France. <br>
+                Professeur Sidya mets à disposition ses dons, afin de vous accompagner dans votre épanouissement et votre
+                cheminement vers la paix intérieur.
+                <br>
+                Découvrez dès maintenant son savoir-faire en cliquant sur le bouton ci-dessous.
+            </p>
             <button> <router-link style="text-decoration: none; color: inherit;" :to="{ name: 'Prestations' }">Je
                     m'informe!</router-link></button>
         </section>
@@ -33,44 +39,46 @@ import ContactBar from '@/views/ContactBar.vue';
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    /* align-items: center; */
-    /* margin: 10px 25px; */
     background-color: white;
 
 }
 
 #biographie {
     position: absolute;
-    top: 260px;
+    top: 180px;
 }
 
 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 19px;
-    color: white;
-    max-width: 44%;
+    max-width: 75%;
     margin-bottom: 10vh;
 
 
 }
 
 h1 {
-    color: rgb(14, 2, 63);
-    margin: 0 0 19px 26px;
-
+    color: rgb(150, 176, 248);
+    margin: 0 0 19px 39px;
+    letter-spacing: 2px;
 }
 
 h2 {
     font-style: italic;
-    color: rgb(14, 2, 63);
+    color: rgb(150, 176, 248);
     margin-bottom: 45px;
-    margin-left: 26px;
-    
+    margin-left: 39px;
+
 }
 
-p{
-    color: rgb(150, 176, 248);
-    margin-left: 26px;
+p {
+    
+    color: rgb(14, 2, 63);
+    margin-left: 39px;
 }
+
 button {
     position: absolute;
     display: flex;
@@ -78,12 +86,12 @@ button {
     justify-content: center;
     left: 310px;
     width: 287px;
-    height: 91px;
+    height: 71px;
     border-radius: 55px;
     background-color: rgb(14, 2, 63);
     font-family: 'Satisfy', cursive;
     color: white;
-    font-size: 33px;
+    font-size: 22px;
     letter-spacing: 2px;
     /* box-shadow: 16px 14px 20px red; */
     overflow: hidden;
@@ -108,6 +116,7 @@ img {
     height: 340px;
     border-radius: 19px;
     box-shadow: inset 0 0 1em rgb(14, 2, 63), 0 0 2em rgb(14, 2, 63);
+    overflow: hidden;
 }
 
 aside {
@@ -120,8 +129,4 @@ aside {
 
 .ContactBar {
     margin-bottom: 80px;
-}
-
-
-
-</style>
+}</style>

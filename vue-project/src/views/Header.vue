@@ -21,22 +21,23 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(14, 2, 63);
-   
-
+    background-color:  rgb(150, 176, 248 , 0.5);
+    
 }
 
 h1 {
-
+    letter-spacing: 2px;
     font-size: 17px;
     color: white;
-    margin-left: 18px;
+    margin-left: 39px;
+    margin-top: 10px;
 
 }
 
 .menu {
-    z-index: 1;
+    /* z-index: 1; */
     display: flex;
+    align-items: center;
     justify-content: space-around;
     padding: 8px;
     width: 50%;
@@ -53,7 +54,7 @@ a {
 
 a:hover {
 
-    color: rgb(150, 176, 248);
+    color: rgb(14, 2, 63);
     font-weight: bold;
 
 }

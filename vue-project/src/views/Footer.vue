@@ -16,6 +16,9 @@
 footer{
     display: flex;
     justify-content: center;
+    align-items: center;
+    background-color:  white;
+    margin: 0 0 15vh 0 ;
      
 }
 .footerText{

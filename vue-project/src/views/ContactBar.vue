@@ -1,6 +1,6 @@
 <template>
     <div class="contactBar">
-        <h1> CONTACTEZ-NOUS </h1>
+        <h1> CONTACTS</h1>
         <h2> ~~ Joignable 24/24h ~~ Consulations à distance possible ~~ </h2>
         <div class="ContactCard">
             <a class="contactBtn" href="mailto:halimatou.cisse@gmail.com">
@@ -8,7 +8,7 @@
                     <div class="title"> <font-awesome-icon :icon="['fas', 'at']" /> Par mail</div>
                     <div class="email">
 
-                        Cliquez ici pour envoyer un email!
+                        Cliquez ici pour envoyer un email
 
                     </div>
                 </div>
@@ -24,7 +24,9 @@
         </div>
         <div class="toContactPage">
             <p>Vous pouvez aussi nous contacter via le formulaire en cliquant
-                <router-link class="link" :to="{ name: 'Contact' }">ICI !</router-link>
+
+                <router-link class="link" :to="{ name: 'Contact' }"><font-awesome-icon :icon="['fas', 'arrow-down']" />ici
+                </router-link>
             </p>
         </div>
     </div>
@@ -32,20 +34,21 @@
 
 <script lang="ts" setup></script>
 
-<style>
+<style scoped>
 .contactBar {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-
+    justify-content: space space-evenly;
+    background: url("https://www.flaticon.com/free-icons/contact");
+    margin-top: 0;
 }
 
 .ContactCard {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%;
     margin-bottom: 120px;
 }
@@ -57,7 +60,7 @@
     justify-content: center;
     /* border: 2px solid rgb(14, 2, 63); */
     border-radius: 50%;
-    margin: 0 20px 10px 20px;
+    /* margin: 0 20px 10px 20px; */
     height: 210px;
     width: 420px;
 }
@@ -70,8 +73,12 @@ h1 {
 
 h2 {
     margin-top: 0;
-    margin-bottom: 16vh;
+    margin-bottom: 7vh;
     color: rgb(150, 176, 248);
+}
+
+p {
+    font-size: 22px;
 }
 
 .title {
@@ -80,7 +87,7 @@ h2 {
     font-size: 24px;
 }
 
-.contactBtn {
+a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,13 +96,11 @@ h2 {
     color: rgb(14, 2, 63);
     font-size: 20px;
 }
-.contactBtn :hover{
-    color: rgb(14, 2, 63);
-    background-color: white;
+
+a:hover:not(.active, .link) {
+
     box-shadow: 10px 5px 5px rgb(150, 176, 248);
     border-radius: 50%;
-    height: 210px;
-    width: 420px;
 
 }
 
@@ -105,16 +110,15 @@ h2 {
     justify-content: center;
     font-style: italic;
     font-size: 22px;
-    width: 100%;
-    background-color: rgb(14, 2, 63);
-    color: rgb(150, 176, 248);
-    margin: 0;
+    width: 99%;
+    background-color: rgb(150, 176, 248, 0.5);
+    /* background-color: rgb(14, 2, 63); */
+    color: rgb(14, 2, 63);
 
 }
 
 .link {
-    color: rgb(150, 176, 248);
-}
-.link:hover{
+    color: rgb(14, 2, 63);
     text-decoration: none;
-}</style>
+}
+</style>
