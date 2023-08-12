@@ -8,7 +8,7 @@
         <div class="prestContainer">
             <div class="prestCard">
                 <div class="card">
-                    <img src="../assets/abstract-flame-background-blazing-blue-fire.jpg" alt="photo prestation">
+                    <img src="../assets/marabout.jpg" alt="photo prestation">
                     <div class="cardTitle">Services de Marabout</div>
                     <p>Mon service de guide spirituel offre une variété de services et de conseils spirituels qui peuvent
                         aider à améliorer votre bien-être et votre bien-être général. Un guide spécialisé qui offre des
@@ -33,7 +33,7 @@
                         spirituelles, à découvrir votre cheminement spirituel.</p>
                 </div>
                 <div class="card">
-                    <img src="../assets/little-blue-bottle.jpg" alt="photo prestation guérisseur">
+                    <img src="../assets/formImg.jpg" alt="photo prestation guérisseur">
                     <div class="cardTitle">Guérisseur spirituel</div>
                     <p>Mon service de guide spirituel offre une variété de services et de conseils spirituels qui peuvent
                         aider à améliorer votre bien-être et votre bien-être général. Un guide spécialisé qui offre des
@@ -109,21 +109,43 @@ h1 {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     border: 2px solid white;
-    background-color: white;
     margin: 55px;
+    padding: 5px;
     height: auto;
-    width: 100%;
-  
+    width: 100%; 
+    background-color: white;
+    box-shadow: 10px 5px 5px rgb(14, 2, 63, 0.4);
+    border-radius: 20px;
+    overflow: hidden;
+
+
+}
+.card:hover {
+    box-shadow: 10px 5px 5px rgb(14, 2, 63);
+    cursor: pointer;
+}
+
+.cardTitle {
+    font-size: 22px;
+    font-weight: bold;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
- 
 
+    width: 100%;
+    object-fit: cover;
+    height: 190px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+ 
 }
 
 .ContactBar {
     margin-bottom: 40px;
-}</style>
+}
+</style>

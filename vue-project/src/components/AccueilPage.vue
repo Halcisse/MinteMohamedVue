@@ -107,6 +107,7 @@ button {
     /* box-shadow: 16px 14px 20px red; */
     overflow: hidden;
     border: none;
+    cursor: pointer;
 
 
 }
@@ -137,7 +138,6 @@ aside {
 }
 
 .story {
-    margin-bottom: 50px;
     position: relative;
 }
 

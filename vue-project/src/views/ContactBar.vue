@@ -24,8 +24,8 @@
         </div>
         <div class="toContactPage">
             <p>Vous pouvez aussi me contacter via le formulaire
-                <router-link class="link" :to="{ name: 'Contact' }"  ><span>~~ en
-                    cliquant ici ~~</span> </router-link>
+                <router-link class="link" :to="{ name: 'Contact' }"><span>~~ en
+                        cliquant ici ~~</span> </router-link>
             </p>
         </div>
     </div>
@@ -41,7 +41,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 0;
-    background-image: 
+    background-image:
         url('../assets/layers-white-paint-background.jpg');
     background-position-y: top;
     background-repeat: no-repeat;
@@ -62,54 +62,49 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* border: 2px solid rgb(14, 2, 63); */
     border-radius: 50%;
-    /* margin: 0 20px 10px 20px; */
     height: 210px;
     width: 420px;
 }
 
-h1 {
-    margin-top: 0;
+h1,
+h2 {
+    margin-top: 25px;
     color: rgb(14, 2, 63);
 
 }
 
-h2 {
-    margin-top: 0;
 
-    color: rgb(150, 176, 248);
-}
 
 p {
     font-size: 22px;
 }
-fas{
+
+fas {
     margin-right: 2px;
 }
+
 .title {
     color: rgb(150, 176, 248);
     /* border-bottom: 40px; */
     font-size: 24px;
 }
 
-a {
+a:not(.active, .link) {
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     color: rgb(14, 2, 63);
     font-size: 20px;
-letter-spacing: 2px;
-
-
+    letter-spacing: 2px;
+    box-shadow: 10px 5px 5px rgb(14, 2, 63, 0.3);
+    border-radius: 50%;
 }
 
 a:hover:not(.active, .link) {
-
-    box-shadow: 10px 5px 5px rgb(150, 176, 248);
+    box-shadow: 10px 5px 5px rgb(14, 2, 63);
     border-radius: 50%;
-
 }
 
 .toContactPage {
@@ -119,21 +114,21 @@ a:hover:not(.active, .link) {
     font-style: italic;
     font-size: 22px;
     width: 100%;
-        /* background-image: 
-        url('../assets/layers-white-paint-background.jpg');
-    background-position-y: top;
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
 
 .link,
 p {
-    color: rgb(150, 176, 248);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(14, 2, 63);
+    ;
     font-size: 24px;
     text-decoration: none;
-}
-span{
-    font-weight: bold;
+
 }
 
-</style>
+span {
+    font-weight: bold;
+}</style>
