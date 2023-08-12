@@ -21,14 +21,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color:  rgb(150, 176, 248 , 0.5);
+
     
 }
 
 h1 {
     letter-spacing: 2px;
     font-size: 17px;
-    color: white;
+    color: rgb(150, 176, 248 );
     margin-left: 39px;
     margin-top: 10px;
 
@@ -43,12 +43,14 @@ h1 {
     width: 50%;
     font-size: 19px;
     letter-spacing: 2px;
+   
 
 }
 
 a {
     text-decoration: none;
-    color: white;
+       color: rgb(150, 176, 248 );
+    font-weight: bold;
 
 }
 

@@ -75,7 +75,8 @@
     justify-content: center;
     align-items: center;
     background-color: rgb(14, 2, 63);
-    margin: 0 15px;
+    margin: 0 ;
+    /* border-radius: 50%; */
 }
 
 .title {

@@ -39,13 +39,24 @@ import ContactBar from '@/views/ContactBar.vue';
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background-color: white;
 
+  
+            
 }
-
+/* .AccueilContent :not(.ContactBar){
+    border: 2px red solid;
+} */
 #biographie {
     position: absolute;
-    top: 180px;
+    top: 50px;
+    width: 100%;
+    height: 100%;
+    padding-top: 125px;
+    background-image: linear-gradient(to bottom,
+            rgba(252, 252, 251, 0.589),
+            rgba(0, 0, 255, 0.5)), url('../assets/background.jpg');
+          
+
 }
 
 p {
@@ -53,14 +64,14 @@ p {
     justify-content: center;
     align-items: center;
     font-size: 19px;
-    max-width: 75%;
+    max-width: 55%;
     /* margin-bottom: 10vh; */
 
 
 }
 
 h1 {
-    color: rgb(150, 176, 248);
+    color: rgb(14, 2, 63);
     margin: 0 0 19px 39px;
     letter-spacing: 2px;
 }
@@ -74,9 +85,9 @@ h2 {
 }
 
 p {
-    
+
     color: rgb(14, 2, 63);
-    margin-left: 39px;
+    margin: 0 0 49px 39px;
 }
 
 button {
@@ -104,7 +115,7 @@ button:hover,
 button:focus {
     color: rgb(14, 2, 63);
     background-color: white;
-    box-shadow: 10px 5px 5px rgb(150, 176, 248);
+    box-shadow: 10px 5px 5px rgb(14, 2, 63);
 }
 
 
@@ -119,14 +130,18 @@ img {
     overflow: hidden;
 }
 
+
+
 aside {
     margin-bottom: 85vh;
 }
 
 .story {
     margin-bottom: 50px;
+    position: relative;
 }
 
 .ContactBar {
     margin-bottom: 40px;
-}</style>
+}
+</style>

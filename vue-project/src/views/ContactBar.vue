@@ -23,10 +23,9 @@
             </a>
         </div>
         <div class="toContactPage">
-            <p>Vous pouvez aussi nous contacter via le formulaire en cliquant
-
-                <router-link class="link" :to="{ name: 'Contact' }"><font-awesome-icon :icon="['fas', 'arrow-down']" />ici
-                </router-link>
+            <p>Vous pouvez aussi me contacter via le formulaire
+                <router-link class="link" :to="{ name: 'Contact' }"  ><span>~~ en
+                    cliquant ici ~~</span> </router-link>
             </p>
         </div>
     </div>
@@ -40,17 +39,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space space-evenly;
-    background: url("https://www.flaticon.com/free-icons/contact");
+    justify-content: center;
     margin-top: 0;
+    background-image: 
+        url('../assets/layers-white-paint-background.jpg');
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .ContactCard {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
-    margin-bottom: 120px;
+    margin-bottom: 50px;
 }
 
 .card {
@@ -80,7 +84,9 @@ h2 {
 p {
     font-size: 22px;
 }
-
+fas{
+    margin-right: 2px;
+}
 .title {
     color: rgb(150, 176, 248);
     /* border-bottom: 40px; */
@@ -89,12 +95,14 @@ p {
 
 a {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     color: rgb(14, 2, 63);
     font-size: 20px;
+letter-spacing: 2px;
+
+
 }
 
 a:hover:not(.active, .link) {
@@ -110,15 +118,22 @@ a:hover:not(.active, .link) {
     justify-content: center;
     font-style: italic;
     font-size: 22px;
-    width: 99%;
-    background-color: rgb(150, 176, 248, 0.5);
-    /* background-color: rgb(14, 2, 63); */
-    color: rgb(14, 2, 63);
-
+    width: 100%;
+        /* background-image: 
+        url('../assets/layers-white-paint-background.jpg');
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
 
-.link {
-    color: rgb(14, 2, 63);
+.link,
+p {
+    color: rgb(150, 176, 248);
+    font-size: 24px;
     text-decoration: none;
 }
+span{
+    font-weight: bold;
+}
+
 </style>
