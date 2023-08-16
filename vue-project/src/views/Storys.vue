@@ -14,7 +14,7 @@
                         <font-awesome-icon :icon="['fas', 'star']" />
                     </div>
                     <p class="story">
-                        J'ai contacté Professeur Sidya lorsque mon copain de longue date m'a quittée pour une autre. Grâce à
+                        J'ai contacté Professeur Tidiane lorsque mon copain de longue date m'a quittée pour une autre. Grâce à
                         son travail, Mr est revenus à moi plus amoureux que jamais! Je
                         recommande!
                     </p>
@@ -27,8 +27,8 @@
                         <font-awesome-icon :icon="['fas', 'star']" />
                     </div>
                     <p class="story">
-                        Une amie m'a recommandé le Professeur SIDYA pour m'aider, j'avais un manque d'energie et des
-                        blocages dans ma vie professionnelle. Grâce aux rituels de Mr Sidya, j'ai pu enfin me retrouver. Un
+                        Une amie m'a recommandé le Professeur Tidiane pour m'aider, j'avais un manque d'energie et des
+                        blocages dans ma vie professionnelle. Grâce aux rituels de Mr Tidiane, j'ai pu enfin me retrouver. Un
                         grand merci !
                     </p>
                 </div>
@@ -40,7 +40,7 @@
                         <font-awesome-icon :icon="['fas', 'star']" />
                     </div>
                     <p class="story">
-                        Victime d'un envoutement, Professeur Sidya est celui qui m'a permis de m'en libérer. Je n'ai pas les mots pour exprimer ma gratitude.</p>
+                        Victime d'un envoutement, Professeur Tidiane est celui qui m'a permis de m'en libérer. Je n'ai pas les mots pour exprimer ma gratitude.</p>
                 </div>
                 <div class="storycard">
                     <p class="name"> - Ornella P.</p>
@@ -52,7 +52,7 @@
                     <p class="story">
 
                         J'étais sceptique à l'idée de consulter un voyant, mais je n'ai pas été déçue de mon expérience avec
-                        Professeur Sidya. Il a su me guider avec bienveillance et m'a donné des conseils précieux pour
+                        Professeur Tidiane. Il a su me guider avec bienveillance et m'a donné des conseils précieux pour
                         m'aider à comprendre l'univers ésotérique.</p>
                 </div>
             </div>

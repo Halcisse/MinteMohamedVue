@@ -92,10 +92,8 @@ h1 {
     justify-content: center;
 
     height: 100%;
-    background-image: linear-gradient(to bottom,
-            rgba(252, 252, 251, 0.229),
-            rgba(136, 136, 240, 0.681)),
-        url('../assets/bubble.jpg');
+    background-image: 
+        url('../assets/layers-white-paint-background.jpg');
     background-position-y: center;
     background-repeat: no-repeat;
     background-size: cover;

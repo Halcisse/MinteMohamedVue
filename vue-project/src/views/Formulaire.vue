@@ -1,17 +1,69 @@
 <template>
-    <form action="">
+    <form action="https://formsubmit.co/498066d30b44ec1b37f0b73891ecbcb3" method="POST">
         <div class="formulaire">
-            <p>Retour rapide!</p>
-            <p>Réservez une consultation dès maintenant!</p>
-            <input class="nom" type="text" placeholder="Nom">
-            <input class="prenom" type="text" placeholder="Prénom">
-            <input class="telephone" type="phone" placeholder="Téléphone">
-            <input class="message" type="text" placeholder="Votre message..">
+            <h3>Je vous recontacte rapidement!</h3>
+            <h3>Réservez une consultation dès maintenant!</h3>
+            <input @blur="handleChange" v-model="nomValue" id="nom" type="text" name="nom" placeholder="Nom" required>
+            <p v-if="nomError" class="errors"> {{ nomError }}</p>
+
+            <input v-model="prenomValue" id="prenom" type="text" name="prenom" placeholder="Prénom" required>
+            <div class="errors"> {{ prenomError }}</div>
+
+            <input v-model="telephoneValue" id="telephone" type="text" name="telephone" placeholder="Téléphone" required>
+            <div class="errors"> {{ telephoneError }}</div>
+
+            <textarea rows="8" id="message" name="message" placeholder="Votre message...   
+(120 caractères max)" required></textarea>
+            
+
+            <input type="hidden" name="_next" value="http://localhost:5173/">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <button type="submit">Envoyer</button>
         </div>
+
     </form>
 </template>
 
 <script lang="ts" setup>
+
+import { useField, useForm } from 'vee-validate'
+import { z } from 'zod'
+import { toTypedSchema } from '@vee-validate/zod'
+
+const validationSchema = z.object({
+    nom: (z.string().nonempty({ message: 'Le champ est obligatoire' })
+        .min(3, { message: "Le nom est trop court" })
+        .max(10, { message: "Le nom est trop long" })
+        .regex(/^(([A-Za-zÉÈÎÏéèêîïàç]+['.]?[ ]?|[a-zéèêîïàç]+['-]?)+)$/, { message: "Le nom ne doit contenir que des lettres" })),
+    prenom: (z.string().nonempty({ message: 'Le champ est obligatoire' })
+        .min(3, { message: "Le prénom est trop court" })
+        .max(10, { message: "Le prénom est trop long!" }))
+        .regex(/^(([A-Za-zÉÈÎÏéèêîïàç]+['.]?[ ]?|[a-zéèêîïàç]+['-]?)+)$/, { message: 'Le prénom ne doit contenir que des lettres' }),
+    telephone: (z.string()
+        .max(10, { message: "Le numéro de téléphone est incorrect+10" }))
+        .regex(/^(0)[67](\s?\d{2}){4}$/, 'Le numéro de téléphone est invalide'),
+    message: (z.string().nonempty({ message: 'Le champ est obligatoire' })
+        .min(10, { message: "Le message est trop court" })
+        .max(120, { message: "Le message est trop long!" }))
+
+})
+
+
+useForm({
+    validationSchema: toTypedSchema(validationSchema)
+})
+
+
+const { value: nomValue, errorMessage: nomError, handleChange } = useField('nom',  { validateOnValueUpdate: false})
+const { value: prenomValue, errorMessage: prenomError } = useField('prenom')
+const { value: telephoneValue, errorMessage: telephoneError } = useField('telephone')
+
+
+
+//ensemble du formulaire
+// useForm()
+
 
 </script>
 
@@ -62,25 +114,54 @@ form {
 }
 
 
-input {
+input,
+textarea {
+    justify-content: flex-start;
     border: none;
-    margin-bottom: 10px;
+    padding: 20px;
     width: 80%;
-    margin: 25px 180px;
-    text-decoration: none;
+    margin: 15px 180px;
+    outline: none;
+    background: white;
+    border-radius: 10px;
+    font-family: 'Satisfy', cursive;
+    font-weight: 500;
+}
+
+button {
+    border-radius: 55px;
+    background-color: rgb(14, 2, 63);
+    font-family: 'Satisfy', cursive;
+    color: white;
+    font-size: 22px;
+    letter-spacing: 2px;
+    width: 287px;
+    height: 71px;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 22px;
 
 }
 
-.nom,
-.prenom,
-.telephone {
-    height: 40px;
+button:hover,
+button:focus {
+    color: rgb(14, 2, 63);
+    background-color: white;
+    box-shadow: 10px 5px 5px rgb(14, 2, 63);
 }
 
-.message {
-    height: 170px;
-}
-p{
-    color:rgb(14, 2, 63);
+
+h3 {
+    color: rgb(14, 2, 63);
     font-size: 19px;
-}</style>
+    margin-bottom: 0;
+}
+
+.errors {
+    margin: 0;
+    font-size: 14px;
+    /* background-color: aqua; */
+    color: rgb(14, 2, 63);
+}
+</style>

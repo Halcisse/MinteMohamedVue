@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="headerBar">
-            <h1>PROFESSEUR SIDYA</h1>
+            <h1>PROFESSEUR TIDIANE</h1>
             <div class="menu">
                 <router-link :to="{ name: 'Accueil' }">ACCUEIL</router-link>
                 <router-link :to="{ name: 'Prestations' }">PRESTATIONS</router-link>

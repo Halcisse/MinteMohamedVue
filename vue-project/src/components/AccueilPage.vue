@@ -1,15 +1,15 @@
 <template>
     <div class="AccueilContent">
         <section id="biographie">
-            <h1>PROFESSEUR SIDYA</h1>
+            <h1>PROFESSEUR TIDIANE</h1>
             <h2>~~ Marabout de l'Afrique de l'Ouest ~~</h2>
-            <p>Bienvenue sur le site du Professeur Sydia, Marabout Voyant Médium et spécialiste du retour affectif. <br>
+            <p>Bienvenue sur le site du Professeur TIDIANE, Marabout Voyant Médium et spécialiste du retour affectif. <br>
                 Il est une figure incontournable des marabouts de France, notamment connu pour la précision de ses
                 prédictions et
                 la qualité de son accompagnement. <br>
                 Il a appris dès l’enfance, les techniques transmises de génération en génération par ses aînés, et les a
                 perfectionné depuis son arrivée en France. <br>
-                Professeur Sidya mets à disposition ses dons, afin de vous accompagner dans votre épanouissement et votre
+                Professeur Tidiane mets à disposition ses dons, afin de vous accompagner dans votre épanouissement et votre
                 cheminement vers la paix intérieur.
                 <br>
                 Découvrez dès maintenant son savoir-faire en cliquant sur le bouton ci-dessous.
@@ -38,14 +38,9 @@ import ContactBar from '@/views/ContactBar.vue';
 .AccueilContent {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-
-  
-            
+    justify-content: space-around;          
 }
-/* .AccueilContent :not(.ContactBar){
-    border: 2px red solid;
-} */
+
 #biographie {
     position: absolute;
     top: 50px;
@@ -54,7 +49,7 @@ import ContactBar from '@/views/ContactBar.vue';
     padding-top: 125px;
     background-image: linear-gradient(to bottom,
             rgba(252, 252, 251, 0.589),
-            rgba(0, 0, 255, 0.5)), url('../assets/background.jpg');
+            rgba(88, 88, 223, 0.5)), url('../assets/background.jpg');
           
 
 }

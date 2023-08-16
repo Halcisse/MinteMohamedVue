@@ -1,7 +1,7 @@
 <template>
 <footer>
     <div class="footerText">
-        <h3>Professeur Sidya</h3>
+        <h3>Professeur Tidiane</h3>
         <p>Adresse</p>
         <p>Mentions légales</p>
     </div>

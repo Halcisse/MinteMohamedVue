@@ -41,7 +41,9 @@
     align-items: center;
     justify-content: center;
     margin-top: 0;
-    background-image:
+    background-image:linear-gradient(to top,
+            rgba(252, 252, 251, 0.829),
+            rgba(136, 136, 240, 0.181)),
         url('../assets/layers-white-paint-background.jpg');
     background-position-y: top;
     background-repeat: no-repeat;
