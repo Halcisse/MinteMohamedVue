@@ -38,7 +38,7 @@
 
 <script lang="ts" setup>
 
-import { useField, useForm } from 'vee-validate'
+import { useField, useForm, useResetForm } from 'vee-validate'
 import {   z } from 'zod'
 import { toTypedSchema } from '@vee-validate/zod'
 
@@ -79,25 +79,34 @@ const { value: messageValue, meta: metaMessage, errorMessage: messageError, hand
 
 
 
-const sendEmail = handleSubmit((values) =>{
-    console.log(values)
-    const formValues = localStorage.setItem('FormContact', JSON.stringify(values));
-    alert('SUCCESS')
-    if (formValues == null){
-        fetch("https://formsubmit.co/ajax/halimatou.cisse@gmail.com", {
+const sendEmail = handleSubmit(async (values, {resetForm}) =>{
+    //Les données du formulaires 
+    const formValues = {
+        nom:values.nom,
+        prenom: values.prenom,
+        telephone: values.telephone,
+        message: values.message
+}
+console.log(formValues)
+   //Envoi du formulaire par mail 
+       await fetch("https://formsubmit.co/ajax/hal.cisse.pro@gmail.com", {
     method: "POST",
     headers: { 
         'Content-Type': 'application/json',
         'Accept': 'application/json'
     },
-    body: JSON.stringify({
-formValues
-    })
+    body: JSON.stringify(formValues)
 })
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => console.log(data) )
     .catch(error => console.log(error));
-    }
+
+    alert('Votre message a été envoyé avec succès ! '),
+    resetForm()
+    
+    
+
+// Redirection page accueil 
 
 })
 
