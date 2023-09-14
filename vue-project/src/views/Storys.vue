@@ -106,7 +106,7 @@
     text-decoration: none;
     border-radius: 10%;
     width: 490px;
-    height: 299px;
+    height: auto;
     list-style-type: none;
     position: relative;
 
@@ -116,12 +116,13 @@
 h1 {
     color: white;
     position: relative;
+    margin: 0;
     
 }
 
 h2 {
     position: relative;
-    margin-top: 0;
+    margin: 0;
     color: rgb(150, 176, 248)
 }
 

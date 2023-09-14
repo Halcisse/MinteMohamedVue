@@ -1,25 +1,36 @@
 <template>
-    <form action="https://formsubmit.co/498066d30b44ec1b37f0b73891ecbcb3" method="POST">
+     <form   @submit="sendEmail" >
         <div class="formulaire">
             <h3>Je vous recontacte rapidement!</h3>
             <h3>Réservez une consultation dès maintenant!</h3>
-            <input @blur="handleChange" v-model="nomValue" id="nom" type="text" name="nom" placeholder="Nom" required>
+            <input 
+                @focus="handleBlur"
+                @blur="handleChange"
+                v-model="nomValue" 
+                id="nom" type="text"
+                name="nom"
+                placeholder="Nom"
+                required>
             <p v-if="nomError" class="errors"> {{ nomError }}</p>
 
-            <input v-model="prenomValue" id="prenom" type="text" name="prenom" placeholder="Prénom" required>
-            <div class="errors"> {{ prenomError }}</div>
+            <input @focus="blurPrenom" @blur="changePrenom" v-model="prenomValue" id="prenom" type="text" name="prenom"
+                placeholder="Prénom" required>
+            <div v-if="prenomError" class="errors"> {{ prenomError }}</div>
 
-            <input v-model="telephoneValue" id="telephone" type="text" name="telephone" placeholder="Téléphone" required>
+            <input @focus="blurTelephone" @blur="changeTelephone" v-model="telephoneValue" id="telephone" type="text"
+                name="telephone" placeholder="Téléphone" required>
             <div class="errors"> {{ telephoneError }}</div>
 
-            <textarea rows="8" id="message" name="message" placeholder="Votre message...   
-(120 caractères max)" required></textarea>
-            
+            <input @focus="blurMessage" @blur="changeMessage" v-model="messageValue" id="message" type="text" name="message" placeholder="Votre message...   
+(10-120 caractères max)" required>
+            <!-- <div class="errors"> {{ messageError }}</div> -->
+
 
             <input type="hidden" name="_next" value="http://localhost:5173/">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
-            <button type="submit">Envoyer</button>
+            <button   type="submit"  :disabled="isSubmitting" >Envoyer</button>
+
         </div>
 
     </form>
@@ -28,46 +39,81 @@
 <script lang="ts" setup>
 
 import { useField, useForm } from 'vee-validate'
-import { z } from 'zod'
+import {   z } from 'zod'
 import { toTypedSchema } from '@vee-validate/zod'
 
-const validationSchema = z.object({
-    nom: (z.string().nonempty({ message: 'Le champ est obligatoire' })
-        .min(3, { message: "Le nom est trop court" })
-        .max(10, { message: "Le nom est trop long" })
-        .regex(/^(([A-Za-zÉÈÎÏéèêîïàç]+['.]?[ ]?|[a-zéèêîïàç]+['-]?)+)$/, { message: "Le nom ne doit contenir que des lettres" })),
-    prenom: (z.string().nonempty({ message: 'Le champ est obligatoire' })
-        .min(3, { message: "Le prénom est trop court" })
-        .max(10, { message: "Le prénom est trop long!" }))
-        .regex(/^(([A-Za-zÉÈÎÏéèêîïàç]+['.]?[ ]?|[a-zéèêîïàç]+['-]?)+)$/, { message: 'Le prénom ne doit contenir que des lettres' }),
-    telephone: (z.string()
-        .max(10, { message: "Le numéro de téléphone est incorrect+10" }))
-        .regex(/^(0)[67](\s?\d{2}){4}$/, 'Le numéro de téléphone est invalide'),
-    message: (z.string().nonempty({ message: 'Le champ est obligatoire' })
-        .min(10, { message: "Le message est trop court" })
-        .max(120, { message: "Le message est trop long!" }))
+
+
+
+const validationSchema = toTypedSchema(
+   z.object({
+        nom: (z.string().nonempty({ message: 'Le champ est obligatoire' })
+            .min(3, { message: "Le nom doit faire plus de 3 caractères" })
+            .max(10, { message: "Le nom doit faire moins de 10 caractères" })
+            .regex(/^(([A-Za-zÉÈÎÏéèêîïàç]+['.]?[ ]?|[a-zéèêîïàç]+['-]?)+)$/, { message: "Le nom ne doit contenir que des lettres" })),
+        prenom: (z.string().nonempty({ message: 'Le champ est obligatoire' })
+            .min(3, { message: "Le prénom doit faire plus de 3 caractères" })
+            .max(10, { message: "Le prénom doit faire moins de 10 caractères" }))
+            .regex(/^(([A-Za-zÉÈÎÏéèêîïàç]+['.]?[ ]?|[a-zéèêîïàç]+['-]?)+)$/, { message: 'Le prénom ne doit contenir que des lettres' }),
+        telephone: (z.string().nonempty({ message: 'Le champ est obligatoire' })
+            .max(10, { message: "Le numéro de téléphone doit comporter 10 chiffres" }))
+            .regex(/^(0)[67](\s?\d{2}){4}$/, 'Le numéro de téléphone est invalide'),
+        message: (z.string().nonempty({ message: 'Le champ est obligatoire' })
+            .min(10, { message: "Le message doit faire au moins 10 caractères" })
+            .max(120, { message: "Le message doit faire moins de 120 caractères" }))
+
+    })
+ 
+)
+
+
+
+const { handleSubmit, isSubmitting } = useForm({
+    validationSchema
+})
+
+const { value: nomValue, meta, errorMessage: nomError, handleBlur, handleChange } = useField('nom', validationSchema, { validateOnValueUpdate: false })
+const { value: prenomValue, meta: metaPrenom, errorMessage: prenomError, handleBlur: blurPrenom, handleChange: changePrenom } = useField('prenom', validationSchema, { validateOnValueUpdate: false })
+const { value: telephoneValue, meta: metaTelephone, errorMessage: telephoneError, handleBlur: blurTelephone, handleChange: changeTelephone } = useField('telephone', validationSchema, { validateOnValueUpdate: false })
+const { value: messageValue, meta: metaMessage, errorMessage: messageError, handleBlur: blurMessage, handleChange: changeMessage } = useField('message', validationSchema, { validateOnValueUpdate: false })
+
+
+
+const sendEmail = handleSubmit((values) =>{
+    console.log(values)
+    const formValues = localStorage.setItem('FormContact', JSON.stringify(values));
+    alert('SUCCESS')
+    if (formValues == null){
+        fetch("https://formsubmit.co/ajax/halimatou.cisse@gmail.com", {
+    method: "POST",
+    headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+formValues
+    })
+})
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
+    }
 
 })
 
 
-useForm({
-    validationSchema: toTypedSchema(validationSchema)
-})
 
 
-const { value: nomValue, errorMessage: nomError, handleChange } = useField('nom',  { validateOnValueUpdate: false})
-const { value: prenomValue, errorMessage: prenomError } = useField('prenom')
-const { value: telephoneValue, errorMessage: telephoneError } = useField('telephone')
-
-
-
-//ensemble du formulaire
-// useForm()
 
 
 </script>
 
 <style scoped>
+pre {
+    color: black;
+    font-size: 22px;
+}
+
 form {
 
     display: flex;
@@ -135,12 +181,11 @@ button {
     color: white;
     font-size: 22px;
     letter-spacing: 2px;
-    width: 287px;
-    height: 71px;
-    overflow: hidden;
+    padding: 15px 70px;
+    outline: none;
     border: none;
     cursor: pointer;
-    margin-bottom: 22px;
+    margin: 22px 0;
 
 }
 
@@ -163,5 +208,28 @@ h3 {
     font-size: 14px;
     /* background-color: aqua; */
     color: rgb(14, 2, 63);
+}
+
+.popup {
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    color: rgb(14, 2, 63);
+    text-align: center;
+    padding: 0 30px 30px;
+    visibility: hidden;
+}
+
+.popup h2 {
+    color: rgb(14, 2, 63);
+}
+
+#icon {
+    width: 120px;
+    height: 120px;
 }
 </style>

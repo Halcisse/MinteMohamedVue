@@ -41,13 +41,14 @@
     align-items: center;
     justify-content: center;
     margin-top: 0;
-    background-image:linear-gradient(to top,
+    /* background-image:linear-gradient(to top,
             rgba(252, 252, 251, 0.829),
-            rgba(136, 136, 240, 0.181)),
-        url('../assets/layers-white-paint-background.jpg');
+            rgba(136, 136, 240, 0.181)), */
+        /* url('../assets/layers-white-paint-background.jpg'); */
     background-position-y: top;
     background-repeat: no-repeat;
     background-size: cover;
+    border-bottom: solid 2px rgb(14, 2, 63);
 
 }
 
@@ -105,7 +106,7 @@ a:not(.active, .link) {
 }
 
 a:hover:not(.active, .link) {
-    box-shadow: 10px 5px 5px rgb(14, 2, 63);
+    box-shadow: 10px 5px 5px rgb(150, 176, 248);
     border-radius: 50%;
 }
 

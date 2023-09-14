@@ -38,7 +38,8 @@ import ContactBar from '@/views/ContactBar.vue';
 .AccueilContent {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;          
+    justify-content: space-around;   
+    /* border-top: solid 2px rgb(14, 2, 63);        */
 }
 
 #biographie {
@@ -47,9 +48,7 @@ import ContactBar from '@/views/ContactBar.vue';
     width: 100%;
     height: 100%;
     padding-top: 125px;
-    background-image: linear-gradient(to bottom,
-            rgba(252, 252, 251, 0.589),
-            rgba(88, 88, 223, 0.5)), url('../assets/background.jpg');
+    /* background-image:  url('../assets/background.jpg'); */
           
 
 }
@@ -118,11 +117,11 @@ button:focus {
 img {
     position: absolute;
     right: 210px;
-    bottom: 390px;
-    width: 560px;
-    height: 340px;
+    bottom: 170px;
+    width: 480px;
+    height: 610px;
     border-radius: 19px;
-    box-shadow: inset 0 0 1em rgb(14, 2, 63), 0 0 2em rgb(14, 2, 63);
+    box-shadow: inset 0 0 1em rgb(141, 140, 148), 0 0 2em rgb(165, 165, 167);
     overflow: hidden;
 }
 

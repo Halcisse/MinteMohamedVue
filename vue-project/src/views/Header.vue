@@ -18,9 +18,11 @@
 
 <style scoped>
 .headerBar {
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
+     background-image:  url('../assets/background.jpg');
 
     
 }

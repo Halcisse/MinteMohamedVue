@@ -29,12 +29,14 @@ body {
   display: grid;
   grid-template-areas: 'header heder' 'router router' 'footer footer';
   grid-template-columns: 100%;
-  grid-template-rows: 48px auto 48px;
+
+ 
 
 }
 
 .header {
   grid-area: header;
+
   
 }
 
