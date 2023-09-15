@@ -2,8 +2,16 @@
 <footer>
     <div class="footerText">
         <h3>Professeur Tidiane</h3>
-        <p>Adresse</p>
+        <p>
+            Adresse <br>
+            Adresse <br>
+            Adresse <br>
+            Adresse <br>
+        </p>
         <p>Mentions légales</p>
+    </div>
+    <div class="footerLogo">
+        <img src="../assets/LOGO.png" alt="">
     </div>
 </footer>
 </template>
@@ -15,10 +23,11 @@
 
 footer{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background-color:  white;
-    margin: 0 0 15vh 0 ;
+    background-color: rgb(14, 2, 63);
+    height: 200px;
+  
      
 }
 .footerText{
@@ -33,5 +42,10 @@ h3{
 }
 p{
     margin:0 ; 
+}
+img{
+    width: 150px;
+    height: 140px;
+    object-fit: contain;
 }
 </style>

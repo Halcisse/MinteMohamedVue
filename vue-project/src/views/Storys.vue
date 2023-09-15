@@ -1,8 +1,9 @@
 <template>
     <div class="temoignages">
-        <div class="title">
+<div class="story">
+    <div class="title">
             <h1>TÉMOIGNAGES</h1>
-            <h2>~~ Les clients qui nous ont fais confiance ~~</h2>
+            <h2>Les clients qui nous ont fais confiance </h2>
         </div>
         <div class="caroussel">
             <div class="slides">
@@ -57,6 +58,7 @@
                 </div>
             </div>
         </div>
+</div>
     </div>
 </template>
 
@@ -74,9 +76,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(14, 2, 63);
-    margin: 0 ;
-    /* border-radius: 50%; */
+      background-image:linear-gradient(to top,
+            rgba(14,2,63,0),
+            rgba(136, 136, 240, 0.781)),
+        url('../assets/background.jpg');
+        background-size:cover;
+         background-position-y:center;
+        background-repeat: no-repeat;
+   
+    /* background-image:url('../assets/eyewhite.png' );
+    background-size: 100px; */
+margin:140px 340px ;
+padding-top: 40px;
+   
 }
 
 .title {
@@ -84,19 +96,19 @@
     flex-direction: column;
     align-items: center;
 
+
 }
 
 .caroussel {
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
-    width: 503px;
-    /* background-color: red; */
+    width: 553px;
     overflow: hidden;
     position: relative;
-    border-radius: 10%;
+ 
+ 
 
 }
+
 
 .storycard {
     display: flex;
@@ -114,7 +126,7 @@
 
 
 h1 {
-    color: white;
+    color:rgb(14, 2, 63);
     position: relative;
     margin: 0;
     
@@ -123,12 +135,16 @@ h1 {
 h2 {
     position: relative;
     margin: 0;
-    color: rgb(150, 176, 248)
+    color: white
 }
 
 p {
     font-style: italic;
+    color:rgb(14, 2, 63);
 
+}
+.stars{
+    color:rgb(14, 2, 63)
 }
 
 
@@ -143,15 +159,15 @@ p {
         transform: translateX(0);
     }
 
-    33% {
+    35% {
         transform: translateX(-503px);
     }
 
-    59% {
+    62% {
         transform: translateX(-1006px);
     }
 
-    83% {
+    85% {
         transform: translateX(-1509px);
     }
 

@@ -1,7 +1,8 @@
 <template>
     <header>
         <div class="headerBar">
-            <h1>PROFESSEUR TIDIANE</h1>
+            <img src="../assets/eyeLOGO.png" alt="Logo Marabout Tidiane" style="width: 150px;height: 110px;">
+            <h1>MARABOUT TIDIANE</h1>
             <div class="menu">
                 <router-link :to="{ name: 'Accueil' }">ACCUEIL</router-link>
                 <router-link :to="{ name: 'Prestations' }">PRESTATIONS</router-link>
@@ -21,18 +22,21 @@
     
     display: flex;
     align-items: center;
-    justify-content: space-between;
-     background-image:  url('../assets/background.jpg');
+    justify-content: space-around;
+    padding: 8px;
+
+    
 
     
 }
 
 h1 {
     letter-spacing: 2px;
-    font-size: 17px;
-    color: rgb(150, 176, 248 );
-    margin-left: 39px;
-    margin-top: 10px;
+    font-size: 19px;
+    color: white;
+    
+
+  
 
 }
 
@@ -41,25 +45,30 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 8px;
-    width: 50%;
+    width: 70%;
     font-size: 19px;
     letter-spacing: 2px;
+
+ 
    
 
 }
 
 a {
     text-decoration: none;
-       color: rgb(150, 176, 248 );
+       color: white;
     font-weight: bold;
 
 }
 
 a:hover {
-
-    color: rgb(14, 2, 63);
+color: white;
     font-weight: bold;
+    border-bottom: 1px solid rgb(150, 176, 248);
+    color: rgb(150, 176, 248);
 
+}
+img{
+    object-fit: contain;
 }
 </style>

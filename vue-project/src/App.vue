@@ -26,30 +26,25 @@ body {
 
 .app-content {
   min-height: 175vh;
-  display: grid;
-  grid-template-areas: 'header heder' 'router router' 'footer footer';
-  grid-template-columns: 100%;
-
- 
+  display: flex;
+  flex-direction: column;
 
 }
 
-.header {
-  grid-area: header;
+.header{
+  background-color: rgb(14, 2, 63);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 
-  
 }
 
-.router {
-  grid-area: router;
-}
-
-.footer {
-  grid-area: footer;
+.router{
+  margin-bottom: 170px;
 }
 
 h1 {
-  color: rgb(150, 176, 248);
+  color: white;
   /* margin: 0 0 19px 0; */
 
 }

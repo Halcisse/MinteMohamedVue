@@ -1,11 +1,14 @@
 <template>
     <div class="contactBar">
-        <h1> CONTACTS</h1>
-        <h2> ~~ Joignable 24/24h ~~ Consulations à distance possible ~~ </h2>
+<div class="contactTitle">
+    <h1> CONTACTS</h1>
+        <h2>  Joignable 24/24h  </h2>
+        <h2>Consulations à distance possible</h2>
+</div>
         <div class="ContactCard">
             <a class="contactBtn" href="mailto:halimatou.cisse@gmail.com">
                 <div class=" card email">
-                    <div class="title"> <font-awesome-icon :icon="['fas', 'at']" /> Par mail</div>
+                    <div class="titleCard"> <font-awesome-icon :icon="['fas', 'at']" /> Par mail</div>
                     <div class="email">
 
                         Cliquez ici pour envoyer un email
@@ -15,19 +18,22 @@
             </a>
             <a class="contactBtn" href="tel:+33673498904">
                 <div class="card telephone">
-                    <div class="title"> <font-awesome-icon icon="phone" /> Par téléphone</div>
+                    <div class="titleCard"> <font-awesome-icon icon="phone" /> Par téléphone</div>
                     <div class="phoneNumber">
                         06.73.49.89.04
                     </div>
                 </div>
             </a>
+         
+                <div class="card formulaire">
+                    
+                    <router-link class="link" :to="{ name: 'Contact' }">
+                        <div class="titleCard"> <font-awesome-icon icon="fa-solid fa-comment-dots" /> Via le formulaire</div><span> en
+                        cliquant ici </span> </router-link>
+                </div>
+           
         </div>
-        <div class="toContactPage">
-            <p>Vous pouvez aussi me contacter via le formulaire
-                <router-link class="link" :to="{ name: 'Contact' }"><span>~~ en
-                        cliquant ici ~~</span> </router-link>
-            </p>
-        </div>
+
     </div>
 </template>
 
@@ -40,24 +46,29 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 0;
-    /* background-image:linear-gradient(to top,
-            rgba(252, 252, 251, 0.829),
-            rgba(136, 136, 240, 0.181)), */
-        /* url('../assets/layers-white-paint-background.jpg'); */
     background-position-y: top;
     background-repeat: no-repeat;
     background-size: cover;
-    border-bottom: solid 2px rgb(14, 2, 63);
+    /* border-bottom: solid 2px rgb(14, 2, 63); */
 
 }
 
+.contactTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(14, 2, 63);
+    /* border:1px solid rgb(14, 2, 63) ; */
+    margin-bottom: 100px;
+}
 .ContactCard {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 100%;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
 
 .card {
@@ -65,15 +76,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    height: 210px;
+ 
     width: 420px;
+    height: 410px;
+      border:1px solid rgb(14, 2, 63) ;
+    /* box-shadow: 10px 5px 5px rgb(14, 2, 63, 0.3); */
+
 }
+.card:hover{  
+      box-shadow: 10px 5px 5px rgb(14, 2, 63);
+    }
 
 h1,
 h2 {
-    margin-top: 25px;
-    color: rgb(14, 2, 63);
+    /* margin-top: 25px; */
+    color: white;
+    margin-bottom: 18px;
 
 }
 
@@ -83,15 +101,14 @@ p {
     font-size: 22px;
 }
 
-fas {
-    margin-right: 2px;
+
+
+.titleCard {
+    color: rgb(14, 2, 63);
+    font-size: 24px;
+    
 }
 
-.title {
-    color: rgb(150, 176, 248);
-    /* border-bottom: 40px; */
-    font-size: 24px;
-}
 
 a:not(.active, .link) {
     display: flex;
@@ -101,23 +118,11 @@ a:not(.active, .link) {
     color: rgb(14, 2, 63);
     font-size: 20px;
     letter-spacing: 2px;
-    box-shadow: 10px 5px 5px rgb(14, 2, 63, 0.3);
-    border-radius: 50%;
+    /* box-shadow: 10px 5px 5px rgb(14, 2, 63, 0.3); */
 }
 
-a:hover:not(.active, .link) {
-    box-shadow: 10px 5px 5px rgb(150, 176, 248);
-    border-radius: 50%;
-}
 
-.toContactPage {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-style: italic;
-    font-size: 22px;
-    width: 100%;
-}
+
 
 .link,
 p {
@@ -126,12 +131,11 @@ p {
     align-items: center;
     justify-content: center;
     color: rgb(14, 2, 63);
-    ;
-    font-size: 24px;
+     font-size: 24px;
     text-decoration: none;
 
 }
 
-span {
+span, a {
     font-weight: bold;
 }</style>
