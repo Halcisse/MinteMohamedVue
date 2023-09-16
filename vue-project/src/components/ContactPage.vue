@@ -4,7 +4,7 @@
             <h1>Formulaire</h1>
             <h2>Envoyez un message pour plus d'informations!</h2>
         </div>
-        <Formulaire />
+        <Formulaire class="form" />
         <ContactBar class="ContactBar" />
     </div>
 </template>
@@ -19,7 +19,9 @@ import Formulaire from '@/views/Formulaire.vue';
 .ContactContent {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     /* background-color: aqua; */
 
 }
@@ -28,15 +30,10 @@ import Formulaire from '@/views/Formulaire.vue';
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 45px 0;
+    margin-top: 100px;
     background-color:  rgb(14, 2, 63);
-    /* background-image:linear-gradient(to bottom,
-            rgba(252, 252, 251, 0.589),
-            rgba(136, 136, 240, 0.781)),
-        url('../assets/background.jpg');
-        background-position-y:center;
-        background-repeat: no-repeat;
-        background-size:cover; */
+    width: 70%;
+    margin-bottom: 100px;
 
 }
 
@@ -45,7 +42,30 @@ h1 {
   
     letter-spacing: 2px;
 }
+.form{
+    width: 70%;
+}
 
 .ContactBar {
+    width: 70%;
     margin-bottom: 40px;
-}</style>
+}
+
+@media (max-width: 991.98px) {
+
+    .title{
+        width: 100%;
+        margin-top: 140px;
+    }
+    .ContactBar {
+    width: 100%;
+
+}
+.form{
+    width: 100%;
+}
+}
+
+
+
+</style>

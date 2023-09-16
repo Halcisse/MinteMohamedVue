@@ -135,14 +135,16 @@ form {
     align-items: center;
     justify-content: center;
     height: 100%;
-    padding: 20px;
-    background-image: linear-gradient(to bottom,
+    padding-top: 25px;
+    background-image: linear-gradient(to top,
             rgba(252, 252, 251, 0.229),
-            rgba(136, 136, 240, 0.681)),
-        url('../assets/backwhite.jpg');
+            rgba(136, 136, 240, 0.681));
+
     background-position-y: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    width: 70%;
+    margin-bottom: 170px;
 }
 
 .formulaire {
@@ -166,6 +168,7 @@ form {
     transition: .3s, background-position .2s .2s;
     cursor: pointer;
 
+   
 }
 
 .formulaire:hover {

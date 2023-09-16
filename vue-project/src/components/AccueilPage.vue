@@ -183,9 +183,12 @@ img{
 .story{
     width: 100%;
 }
-/* .ContactBar{
+.ContactBar {
+
     width: 100%;
-} */
+
+}
+
 }
 
 
