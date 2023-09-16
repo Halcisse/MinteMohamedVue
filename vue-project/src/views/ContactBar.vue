@@ -49,6 +49,8 @@
     background-position-y: top;
     background-repeat: no-repeat;
     background-size: cover;
+    /* width: 70%; */
+ 
     /* border-bottom: solid 2px rgb(14, 2, 63); */
 
 }
@@ -58,7 +60,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+  width: 100%;
     background-color: rgb(14, 2, 63);
     /* border:1px solid rgb(14, 2, 63) ; */
     margin-bottom: 100px;
@@ -66,8 +68,9 @@
 .ContactCard {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: center;
+   width: 100%;
+    flex-wrap: wrap;
     /* margin-bottom: 50px; */
 }
 
@@ -76,10 +79,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
- 
     width: 420px;
     height: 410px;
-      border:1px solid rgb(14, 2, 63) ;
+    border:1px solid rgb(14, 2, 63) ;
+    margin: 20px;
     /* box-shadow: 10px 5px 5px rgb(14, 2, 63, 0.3); */
 
 }
@@ -138,4 +141,49 @@ p {
 
 span, a {
     font-weight: bold;
-}</style>
+}
+
+
+@media (max-width: 1255px) {
+    /* .ContactCard {
+    display: flex;
+    flex-direction: column;
+ 
+} */
+.card{
+    width: 420px;
+    height: 210px;
+    margin-bottom: 22px;
+    border-radius: 16px;
+}
+.contactTitle{
+    width: 100%;
+   
+}
+}
+
+@media (max-width: 991.98px) {
+
+    .contactBar{
+        width: 100%;
+    }
+
+/* .contactTitle{
+    width: 100%;
+    background-color: red;
+} */
+.ContactCard {
+    display: flex;
+    flex-direction: column;
+ 
+}
+.card{
+    width: 420px;
+    height: 210px;
+    margin-bottom: 22px;
+    border-radius: 16px;
+}
+}
+
+
+</style>

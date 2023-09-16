@@ -88,7 +88,8 @@
     background-size: 100px; */
 margin:140px 340px ;
 padding-top: 40px;
-   
+width: 70%;
+ 
 }
 
 .title {
@@ -174,5 +175,16 @@ p {
     100% {
         transform: translateX(0);
     }
+}
+
+
+@media (max-width: 991.98px) {
+
+    .temoignages{
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+}
+
 }
 </style>

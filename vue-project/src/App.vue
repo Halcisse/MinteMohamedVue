@@ -45,7 +45,7 @@ body {
 
 h1 {
   color: white;
-  /* margin: 0 0 19px 0; */
+
 
 }
 
@@ -54,6 +54,22 @@ h2 {
   font-style: italic;
   color: white;
   margin-bottom: 45px;
-  /* margin-top: 0; */
+
+}
+@media (max-width: 991.98px) {
+
+.header{
+  margin-bottom: 100px;
+  width: 100%;
+}
+.router{
+  width: 100%;
+}
+
+.footer{
+  width: 100%;
+}
+
+
 }
 </style>

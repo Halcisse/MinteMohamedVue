@@ -79,7 +79,7 @@ const { value: messageValue, meta: metaMessage, errorMessage: messageError, hand
 
 
 
-const sendEmail = handleSubmit(async (values, {resetForm}) =>{
+const sendEmail = handleSubmit( (values, {resetForm}) =>{
     //Les données du formulaires 
     const formValues = {
         nom:values.nom,
@@ -89,19 +89,24 @@ const sendEmail = handleSubmit(async (values, {resetForm}) =>{
 }
 console.log(formValues)
    //Envoi du formulaire par mail 
-       await fetch("https://formsubmit.co/ajax/hal.cisse.pro@gmail.com", {
+     fetch("https://formsubmit.co/ajax/hal.cisse.pro@gmail.com", {
     method: "POST",
     headers: { 
+      
         'Content-Type': 'application/json',
         'Accept': 'application/json'
     },
     body: JSON.stringify(formValues)
 })
     .then(response => response.json())
-    .then(data => console.log(data) )
+    .then(data => 
+        console.log(data)  ,  
+        alert('Votre message a été envoyé avec succès ! '),
+       
+    )
     .catch(error => console.log(error));
 
-    alert('Votre message a été envoyé avec succès ! '),
+ 
     resetForm()
     
     
@@ -241,4 +246,8 @@ h3 {
     width: 120px;
     height: 120px;
 }
+
+/* @media (max-width: 390px) {
+
+} */
 </style>

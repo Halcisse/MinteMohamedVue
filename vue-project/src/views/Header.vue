@@ -19,7 +19,7 @@
 
 <style scoped>
 .headerBar {
-    
+ 
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -70,5 +70,18 @@ color: white;
 }
 img{
     object-fit: contain;
+}
+
+
+@media (max-width: 991.98px) {
+    .headerBar{
+        width: 100%;
+    }
+}
+@media (max-width: 774px) {
+    .menu{
+        display: flex;
+        flex-direction: column;
+    }
 }
 </style>

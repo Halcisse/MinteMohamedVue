@@ -3,12 +3,13 @@
     <div class="footerText">
         <h3>Professeur Tidiane</h3>
         <p>
-            Adresse <br>
-            Adresse <br>
-            Adresse <br>
-            Adresse <br>
+            Karamba Diaby <br>
+            Chemin Piton Galets <br>
+            97439 Saint-Rose <br>
+         
+            0610101010 <br>
         </p>
-        <p>Mentions légales</p>
+        <p>        <router-link :to="{ name: 'Mentions' }">MENTIONS LEGALES</router-link></p>
     </div>
     <div class="footerLogo">
         <img src="../assets/LOGO.png" alt="">
