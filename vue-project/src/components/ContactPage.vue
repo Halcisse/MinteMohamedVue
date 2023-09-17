@@ -39,7 +39,7 @@ import Formulaire from '@/views/Formulaire.vue';
 
 h2,
 h1 {
-  
+    text-align: center;
     letter-spacing: 2px;
 }
 .form{

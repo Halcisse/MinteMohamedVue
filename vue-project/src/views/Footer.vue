@@ -11,6 +11,12 @@
         </p>
         <p>        <router-link :to="{ name: 'Mentions' }">MENTIONS LEGALES</router-link></p>
     </div>
+    <div class="footerLink">
+        
+            Image de <a href="https://fr.freepik.com/photos-gratuite/ingredients-cles-pres-bougies_2014709.htm#query=potion%20d%20amour&position=1&from_view=search&track=ais">Freepik</a>
+
+        
+    </div>
     <div class="footerLogo">
         <img src="../assets/LOGO.png" alt="">
     </div>
@@ -28,15 +34,13 @@ footer{
     align-items: center;
     background-color: rgb(14, 2, 63);
     height: 200px;
+    color:rgb(150, 176, 248);
   
      
 }
-.footerText{
-
-    margin: 0;
-    font-size: 11px;
+a{
+    text-decoration: none;
     color:rgb(150, 176, 248);
-   
 }
 h3{
     margin:0 ;
@@ -48,5 +52,22 @@ img{
     width: 150px;
     height: 140px;
     object-fit: contain;
+}
+
+
+@media (max-width: 991.98px) {
+    footer{
+    display: flex;
+    flex-direction: column;
+height: auto;
+padding-top: 20px;     
+}
+.footerText, .footerLink{
+margin-bottom: 50px;
+font-size: 15px;
+color:rgb(150, 176, 248);
+
+}
+
 }
 </style>

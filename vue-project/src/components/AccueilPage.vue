@@ -136,8 +136,7 @@ img {
     height: 100%;
     overflow: hidden;
     object-fit: cover;
-    background-color: red;
-    
+
 }
 
 
@@ -166,6 +165,7 @@ img {
     margin-top: 30px;
     margin-bottom: 15px;
     padding: 0;
+    text-align: center;
     
 }
 .content{

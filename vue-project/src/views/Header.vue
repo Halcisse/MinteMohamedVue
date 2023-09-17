@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="headerBar">
-            <img src="../assets/eyeLOGO.png" alt="Logo Marabout Tidiane" style="width: 150px;height: 110px;">
+            <img src="../assets/eyeLOGO.png" alt="Logo Marabout Tidiane" >
             <h1>MARABOUT TIDIANE</h1>
             <div class="menu">
                 <router-link :to="{ name: 'Accueil' }">ACCUEIL</router-link>
@@ -69,6 +69,8 @@ color: white;
 
 }
 img{
+    width: 150px;
+    height: 110px;
     object-fit: contain;
 }
 
@@ -77,11 +79,15 @@ img{
     .headerBar{
         width: 100%;
     }
-}
-@media (max-width: 774px) {
-    .menu{
+    .menu, h1{
         display: flex;
         flex-direction: column;
+        font-size: 13px;
+    }
+    img{
+        width: 70px;
+        height: 100px;
     }
 }
+
 </style>

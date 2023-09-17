@@ -70,7 +70,7 @@ h2 {
 .footer{
   width: 100%;
 }
-
-
 }
+
+
 </style>

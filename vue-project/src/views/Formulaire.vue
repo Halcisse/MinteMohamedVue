@@ -101,7 +101,7 @@ console.log(formValues)
     .then(response => response.json())
     .then(data => 
         console.log(data)  ,  
-        alert('Votre message a été envoyé avec succès ! '),
+        // alert('Votre message a été envoyé avec succès ! '),
        
     )
     .catch(error => console.log(error));
@@ -139,10 +139,6 @@ form {
     background-image: linear-gradient(to top,
             rgba(252, 252, 251, 0.229),
             rgba(136, 136, 240, 0.681));
-
-    background-position-y: center;
-    background-repeat: no-repeat;
-    background-size: contain;
     width: 70%;
     margin-bottom: 170px;
 }
@@ -250,7 +246,13 @@ h3 {
     height: 120px;
 }
 
-/* @media (max-width: 390px) {
+@media (max-width: 553px) {
+    .formulaire {
+border: none;
 
-} */
+
+    }
+}
+
+
 </style>

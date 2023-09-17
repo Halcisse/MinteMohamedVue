@@ -79,8 +79,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 420px;
-    height: 410px;
+    width: 320px;
+    height: 400px;
     border:1px solid rgb(14, 2, 63) ;
     margin: 20px;
     /* box-shadow: 10px 5px 5px rgb(14, 2, 63, 0.3); */
@@ -95,6 +95,7 @@ h2 {
     /* margin-top: 25px; */
     color: white;
     margin-bottom: 18px;
+    font-family: 'Satisfy', cursive;
 
 }
 
@@ -142,6 +143,10 @@ p {
 span, a {
     font-weight: bold;
 }
+.email{
+   text-align: center;
+   padding: 3px;
+}
 
 
 @media (max-width: 1255px) {
@@ -151,7 +156,7 @@ span, a {
  
 } */
 .card{
-    width: 420px;
+   
     height: 210px;
     margin-bottom: 22px;
     border-radius: 16px;
@@ -178,7 +183,7 @@ span, a {
  
 }
 .card{
-    width: 420px;
+
     height: 210px;
     margin-bottom: 22px;
     border-radius: 16px;
