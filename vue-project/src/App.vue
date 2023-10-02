@@ -18,10 +18,10 @@ import TheFooter from '@/views/Footer.vue'
 
 <style >
 body {
-  font-family: 'Satisfy', cursive;
+  font-family: 'Montserrat', sans-serif;
   color: white;
   margin: 0;
-  /* background-color: rgb(14, 2, 63); */
+
 }
 
 .app-content {
@@ -46,12 +46,13 @@ body {
 
 h1 {
   color: white;
+  font-family: 'Mooli', sans-serif;
 
 
 }
 
 h2 {
-
+  font-family: 'Mooli', sans-serif;
   font-style: italic;
   color: white;
   margin-bottom: 45px;

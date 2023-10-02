@@ -6,7 +6,7 @@
         <h2>Consulations à distance possible</h2>
 </div>
         <div class="ContactCard">
-            <a class="contactBtn" href="mailto:halimatou.cisse@gmail.com">
+            <a class="contactBtn" href="mailto:maraboutidiane@gmail.com">
                 <div class=" card email">
                     <div class="titleCard"> <font-awesome-icon :icon="['fas', 'at']" /> Par mail</div>
                     <div class="email">
@@ -16,11 +16,11 @@
                     </div>
                 </div>
             </a>
-            <a class="contactBtn" href="tel:+33673498904">
+            <a class="contactBtn" href="tel:+33753796518">
                 <div class="card telephone">
                     <div class="titleCard"> <font-awesome-icon icon="phone" /> Par téléphone</div>
                     <div class="phoneNumber">
-                        06.73.49.89.04
+                        07.53.79.65.18
                     </div>
                 </div>
             </a>
@@ -95,7 +95,6 @@ h2 {
     /* margin-top: 25px; */
     color: white;
     margin-bottom: 18px;
-    font-family: 'Satisfy', cursive;
 
 }
 

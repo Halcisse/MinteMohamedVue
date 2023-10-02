@@ -1,25 +1,45 @@
 <template>
-<h1>Mentions</h1>
+<div class="mentions">
+    <h1>Mentions Légales</h1>
+    <br><br>
+    <br><br>
 <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed fermentum erat. Integer nec efficitur velit, ac mollis nisi. Aenean vestibulum nisl velit, eu consequat elit congue in. Mauris at eros dictum, posuere lorem ac, gravida eros. Curabitur facilisis justo vel dolor commodo, vel fringilla nisi interdum. Maecenas malesuada tempus nulla, id facilisis purus tempor sed. Nulla diam nisl, tempus at aliquam a, eleifend sit amet lectus.
+    L’éditeur : Le présent site est édité par le marabout Tidiane, une entreprise individuelle, dont le siège social est située à LA REUNION. L’entreprise n’est pas enregistrée au registre du commerce et des sociétés. <br><br>
+    Conception du site : Le site tidianemarabout.com a été réalisé par un particulier (tel 0673498904). <br><br>
+    Hébergement du site : L’hébergement du Site est assuré par la société Ionos.  <br><br>
 
-Donec a nulla at tellus tincidunt sagittis quis vitae nisl. Mauris eu mattis lacus. Aenean nunc magna, consequat lobortis pretium sit amet, rhoncus id velit. Mauris tincidunt quam sed ornare aliquam. Mauris nec fermentum lacus. Praesent urna augue, tincidunt vitae erat eu, pulvinar accumsan dui. Donec dapibus dolor magna, eu finibus leo placerat a. Morbi volutpat, ex in tincidunt euismod, erat sem euismod ipsum, eget efficitur ipsum mi et neque.
 
-Vivamus metus lorem, vestibulum id elementum varius, lacinia nec arcu. Quisque mattis, neque non viverra finibus, sem felis accumsan ex, in tincidunt justo sapien eget enim. Curabitur varius lacus ante, quis malesuada quam congue vitae. Donec vehicula id orci ac blandit. Proin porttitor orci laoreet, bibendum justo nec, vehicula odio. Sed ultricies laoreet interdum. Aenean non blandit neque. Donec gravida sapien sed justo fermentum feugiat. Donec id lorem pulvinar, fermentum dolor a, gravida odio.
+   Le marabout Tidiane s’efforce d’assurer l’exactitude et la mise à jour des informations diffusées sur ce site, dont il se réserve le droit de corriger, à tout moment et sans préavis, le contenu.
+   <br><br>
+En conséquence, le marabout Tidiane décline toute responsabilité : <br><br>
 
-Cras facilisis elit ut nisi mattis eleifend. Aenean vestibulum neque non enim consectetur, nec fringilla ligula ultrices. Proin sollicitudin quis lacus sed gravida. Aliquam erat volutpat. Nunc finibus vel sem id pharetra. Proin scelerisque lectus ligula. Sed rutrum facilisis sem. Suspendisse potenti. Vestibulum vel nunc sit amet massa pretium consequat. Vestibulum eleifend nisl eget leo varius, id elementum nibh imperdiet. Nunc ornare libero quam, nec dapibus lectus luctus sed. Curabitur suscipit malesuada sodales. Maecenas et justo volutpat enim egestas imperdiet in tristique libero. Fusce accumsan ante nisi, et ornare enim fermentum eu.
+– Pour toute interruption du site ; <br><br>
 
-Nam sit amet pulvinar lacus. Praesent condimentum, est ac ornare feugiat, arcu sapien tempus nulla, a ornare risus erat sit amet libero. Sed laoreet sodales felis. Fusce vulputate blandit lectus a sagittis. Phasellus volutpat efficitur velit et condimentum. Integer sed elit pretium, vehicula enim eget, malesuada orci. Curabitur eleifend convallis nisl, vel eleifend justo rutrum vel. Aliquam elementum, arcu a vehicula faucibus, ligula turpis lobortis tortor, in molestie ante risus id dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam luctus nibh ex, quis fermentum elit euismod pellentesque. Donec lacinia lectus et nisl tempus pulvinar. In ac volutpat risus, et commodo mauris. Curabitur lacinia lacinia justo. Fusce tellus eros, dapibus quis mollis in, congue non odio.
+– Pour toute survenance de bugs ; <br><br>
+
+– Pour toute inexactitude ou omission portant sur des informations disponibles sur le site ; <br><br>
+
+– Pour tous dommages résultants d’une intrusion frauduleuse d’un tiers ayant entraîné une modification des informations mises à la disposition sur le site ; <br><br>
+
+– Et plus généralement de tout dommage direct ou indirect, quelles qu’en soient les causes, natures ou conséquences y compris les coûts pouvant survenir du fait de l’acquisition de biens proposés sur le site, les pertes de profits, de clientèle, de données, ou tout autre perte de biens incorporels pouvant survenir à raison de l’accès de quiconque au site ou de l’impossibilité d’y accéder ou du crédit accordé à une quelconque information provenant directement ou indirectement de ce dernier. <br><br>
+
+Cookies : Pour des besoins de statistiques et d’affichage, le présent site utilise des cookies. Il s’agit de petits fichiers textes stockés sur votre disque dur afin d’enregistrer des données techniques sur votre navigation. Certaines parties de ce site ne peuvent être fonctionnelle sans l’acceptation de cookies. <br><br>
 
 </p>
+</div>
 </template>
 
 <script lang="ts" setup>
 </script>
 
 <style scoped>
+.mentions{
+text-align: center;
+    margin: 170px;
+    min-height: 0;
+}
 h1,
 p{
-    color: blue;
+    color: rgb(14, 2, 63);
 }
 </style>

@@ -1,22 +1,25 @@
 <template>
 <footer>
-    <div class="footerText">
-        <h3>Professeur Tidiane</h3>
-        <p>
-            Karamba Diaby <br>
-            Chemin Piton Galets <br>
-            97439 Saint-Rose <br>
-         
-            0610101010 <br>
-        </p>
-        <p>        <router-link :to="{ name: 'Mentions' }">MENTIONS LEGALES</router-link></p>
-    </div>
     <div class="footerLink">
         
-            Image de <a href="https://fr.freepik.com/photos-gratuite/ingredients-cles-pres-bougies_2014709.htm#query=potion%20d%20amour&position=1&from_view=search&track=ais">Freepik</a>
-
+        Image de <a href="https://fr.freepik.com/photos-gratuite/ingredients-cles-pres-bougies_2014709.htm#query=potion%20d%20amour&position=1&from_view=search&track=ais">Freepik</a>
+        <p>        <router-link :to="{ name: 'Mentions' }">MENTIONS LEGALES</router-link></p>
+    
+</div>
+    <div class="footerText">
+        <h3>Professeur Tidiane</h3>
         
+        <p>
+         <br>
+            Chemin Piton Galets <br>
+            97439 Saint-Rose <br>
+            LA REUNION <br>
+         
+            07.53.79.65.18 <br>
+        </p>
+    
     </div>
+
     <div class="footerLogo">
         <img src="../assets/LOGO.png" alt="">
     </div>

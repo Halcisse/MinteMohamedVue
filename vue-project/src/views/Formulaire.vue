@@ -23,26 +23,29 @@
 
             <input @focus="blurMessage" @blur="changeMessage" v-model="messageValue" id="message" type="text" name="message" placeholder="Votre message...   
 (10-120 caractères max)" required>
-            <!-- <div class="errors"> {{ messageError }}</div> -->
-
-
             <input type="hidden" name="_next" value="http://localhost:5173/">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
-            <button   type="submit"  :disabled="isSubmitting" >Envoyer</button>
+            <button  :disabled="isSubmitting" >Envoyer</button>
 
         </div>
-
+        <label v-if="msgOk == true" class="msgOk">Le message a été envoyé avec succès </label>
+        <label v-if="msgKO == true" class="msgKO">Une erreur s'est produite, veuillez rééssayer </label>
     </form>
+
 </template>
 
 <script lang="ts" setup>
 
-import { useField, useForm, useResetForm } from 'vee-validate'
-import {   z } from 'zod'
+import { useField, useForm, } from 'vee-validate'
+import { z } from 'zod'
 import { toTypedSchema } from '@vee-validate/zod'
+import { ref, watch } from 'vue';
+import { useRouter } from 'vue-router';
 
 
+let msgOk = ref(false)
+let msgKO = ref(false)
 
 
 const validationSchema = toTypedSchema(
@@ -67,10 +70,10 @@ const validationSchema = toTypedSchema(
 )
 
 
-
 const { handleSubmit, isSubmitting } = useForm({
     validationSchema
 })
+
 
 const { value: nomValue, meta, errorMessage: nomError, handleBlur, handleChange } = useField('nom', validationSchema, { validateOnValueUpdate: false })
 const { value: prenomValue, meta: metaPrenom, errorMessage: prenomError, handleBlur: blurPrenom, handleChange: changePrenom } = useField('prenom', validationSchema, { validateOnValueUpdate: false })
@@ -78,8 +81,15 @@ const { value: telephoneValue, meta: metaTelephone, errorMessage: telephoneError
 const { value: messageValue, meta: metaMessage, errorMessage: messageError, handleBlur: blurMessage, handleChange: changeMessage } = useField('message', validationSchema, { validateOnValueUpdate: false })
 
 
+// const route = useRoute();
+// console.log(route.params)
+// watch(() => route.params, (newParams) =>{
+// console.log(newParams)
+// })
+const router = useRouter()
 
 const sendEmail = handleSubmit( (values, {resetForm}) =>{
+  
     //Les données du formulaires 
     const formValues = {
         nom:values.nom,
@@ -89,7 +99,7 @@ const sendEmail = handleSubmit( (values, {resetForm}) =>{
 }
 console.log(formValues)
    //Envoi du formulaire par mail 
-     fetch("https://formsubmit.co/ajax/hal.cisse.pro@gmail.com", {
+     fetch("https://formsubmit.co/ajax/ab56819fb3854d8e5a3cbbff87ba3434", {
     method: "POST",
     headers: { 
       
@@ -100,18 +110,20 @@ console.log(formValues)
 })
     .then(response => response.json())
     .then(data => 
-        console.log(data)  ,  
-        // alert('Votre message a été envoyé avec succès ! '),
-       
-    )
-    .catch(error => console.log(error));
+{ 
+    if(data.success){
+       msgOk = ref(true), 
+       router.push('../components/AccueilPage.vue')
 
- 
     resetForm()
-    
-    
 
-// Redirection page accueil 
+} else {
+    msgKO = ref(true)
+}
+    
+}
+)
+    .catch(error => console.log(error));
 
 })
 
@@ -163,7 +175,7 @@ form {
         conic-gradient(at bottom var(--b) left var(--b), var(--_g)) 0 var(--_i, 200%)/var(--_i, var(--b)) 200% no-repeat;
     transition: .3s, background-position .2s .2s;
     cursor: pointer;
-
+margin-bottom: 15px;
    
 }
 
@@ -190,7 +202,6 @@ textarea {
 button {
     border-radius: 55px;
     background-color: rgb(14, 2, 63);
-    font-family: 'Satisfy', cursive;
     color: white;
     font-size: 22px;
     letter-spacing: 2px;
@@ -223,27 +234,14 @@ h3 {
     color: rgb(14, 2, 63);
 }
 
-.popup {
-    width: 400px;
-    background: #fff;
-    border-radius: 6px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.1);
-    color: rgb(14, 2, 63);
-    text-align: center;
-    padding: 0 30px 30px;
-    visibility: hidden;
-}
 
-.popup h2 {
-    color: rgb(14, 2, 63);
-}
 
 #icon {
     width: 120px;
     height: 120px;
+}
+label{
+    color: rgb(14, 2, 63);
 }
 
 @media (max-width: 553px) {

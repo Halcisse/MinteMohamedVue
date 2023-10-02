@@ -4,7 +4,7 @@
     <section id="biographie">
             <div class="title">
                 <h1>MARABOUT TIDIANE</h1>
-            <h2> Spécialiste des pratiques ancestrale de l'Afrique de l'Ouest </h2>
+            <h2> Spécialiste des pratiques ancestrales de l'Afrique de l'Ouest </h2>
             </div>
 <div class="content">
 <div class="presentation">
@@ -13,7 +13,7 @@
                 <br><br>
               Résidant sur l'île de la Réunion, je serais ravi de vous acceuillir à mon atelier pour les consultations, mais également à distance, par téléphone ou mail. 
               <br><br>
-                Ayant hérité du don de voyances, je me suis formé  depuis l'enfance aux pratiques de maraboutage et de voyance enseignés par mes ainés. <br>
+                Ayant hérité du don de voyance, je me suis formé  depuis l'enfance aux pratiques de maraboutage et de voyance enseignés par mes ainés. <br>
                  Ces enseignements sont transmis de générations en générations, selon les rites traditionnelles et ancestraux de l'Afrique de l'Ouest.
                 <br><br>
                 Grâce à la précision de mes prédictions et la qualité de mon accompagnement, j'ai su perfectionner mes méthodes au fil des années et ainsi devenir une figure incontournable des marabouts de France.  <br>
@@ -111,7 +111,6 @@ button {
     height: 71px;
     border-radius: 55px;
     background-color: rgb(14, 2, 63);
-    font-family: 'Satisfy', cursive;
     color: white;
     font-size: 22px;
     letter-spacing: 2px;

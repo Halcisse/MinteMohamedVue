@@ -2,8 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
+  routes:  [
     { path: '/', name: 'Accueil', component: () => import('@/components/AccueilPage.vue') },
+    
 
     {
       path: '/prestations',
@@ -19,6 +20,14 @@ const router = createRouter({
       path: '/mentions',
       name: 'Mentions',
       component: () => import('@/components/MentionsPage.vue')
+    },
+    {
+      path: "/:PathMatch(.*)*",
+      name: "notfound",
+      component: () => import('@/components/NotFound.vue'),
+    },
+    {
+      "rewrites": [{ "source": "/:path*", "destination": "/index.html" }]
     }
   ]
 })

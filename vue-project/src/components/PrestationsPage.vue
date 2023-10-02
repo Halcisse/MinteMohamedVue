@@ -10,37 +10,25 @@
                 <div class="card">
 
                     <h3 class="cardTitle">Services de Marabout</h3>
-                    <p>Mon service de guide spirituel offre une variété de services et de conseils spirituels qui peuvent
-                        aider à améliorer votre bien-être et votre bien-être général. Un guide spécialisé qui offre des
-                        conseils et des outils personnalisés pour vous aider à explorer et à comprendre vos croyances
-                        spirituelles, à découvrir votre cheminement spirituel..</p>
+                    <p>Lors des consultations pour le service de Marabout,  nous pourrons couvrir ensemble de nombreux aspects de votre vie tels que la santé, l’amour, la réussite professionnelle, les finances, etc… J’utilise pour cela la méthode de divination ancestrale Ouest Africaine de lecture de Cory.</p>
                         <img src="../assets/marabout.jpg" alt="photo prestation">
                 </div>
                 <div class="card">
            
                     <h3 class="cardTitle">Rituels de retour affectif</h3>
-                    <p>Mon service de guide spirituel offre une variété de services et de conseils spirituels qui peuvent
-                        aider à améliorer votre bien-être et votre bien-être général. Un guide spécialisé qui offre des
-                        conseils et des outils personnalisés pour vous aider à explorer et à comprendre vos croyances
-                        spirituelles, à découvrir votre cheminement spirituel.</p>
+                    <p>Je me suis également spécialisé au fil des années sur le service de retour d’affection grâce à des rituels d’amour ou des conseils afin d’attirer l’amour dans votre vie. Vous pouvez également me consulter pour résoudre des problèmes personnels, tels que les conflits familiaux, les problèmes de santé, les difficultés financières ou les problèmes conjugaux. </p>
                         <img src="../assets/ingredients-cles-pres-bougies.jpg" alt="photo prestation retour affectif">
                 </div>
                 <div class="card">
                  
-                    <h3 class="cardTitle">Voyance</h3>
-                    <p>Mon service de guide spirituel offre une variété de services et de conseils spirituels qui peuvent
-                        aider à améliorer votre bien-être et votre bien-être général. Un guide spécialisé qui offre des
-                        conseils et des outils personnalisés pour vous aider à explorer et à comprendre vos croyances
-                        spirituelles, à découvrir votre cheminement spirituel.</p>
-                        <img src="../assets/numerology-concept-still-life (1).jpg" alt="photo prestation voyance">
+                    <h3 class="cardTitle">Travaux de protection</h3>
+                    <p>Je propose des travaux de protection contre les influences négatives, les malédictions, le mauvais œil ou les esprits malfaisants. Cela peut inclure des rituels de protection ou des prières spéciales.</p>
+                        <img src="../assets/protection.jpg" alt="photo prestation voyance">
                 </div>
                 <div class="card">
               
-                    <h3 class="cardTitle">Guérisseur spirituel</h3>
-                    <p>Mon service de guide spirituel offre une variété de services et de conseils spirituels qui peuvent
-                        aider à améliorer votre bien-être et votre bien-être général. Un guide spécialisé qui offre des
-                        conseils et des outils personnalisés pour vous aider à explorer et à comprendre vos croyances
-                        spirituelles, à découvrir votre cheminement spirituel.</p>
+                    <h3 class="cardTitle">Chance & Prospérité</h3>
+                    <p>Si vous avez besoin d’attirer la chance et la prospérité dans votre vie, vous êtes au bon endroit ! Je suis en mesure de vous accompagner afin d’améliorer la chance dans votre vie et vous mettre dans les bonnes conditions pour accueillir une vie de richesse.</p>
                         <img src="../assets/formImg.jpg" alt="photo prestation guérisseur">
                 </div>
             </div>
@@ -133,8 +121,7 @@ width: 100%;
 height: 194px;
     object-fit:cover;
     object-position: 10% 80%;
-    /* margin-bottom: 15px;
-    border-radius: 8px; */
+
  
 }
 
