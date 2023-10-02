@@ -26,9 +26,7 @@ const router = createRouter({
       name: "notfound",
       component: () => import('@/components/NotFound.vue'),
     },
-    {
-      "rewrites": [{ "source": "/:path*", "destination": "/index.html" }]
-    }
+
   ]
 })
 
