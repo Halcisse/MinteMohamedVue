@@ -149,11 +149,6 @@ span, a {
 
 
 @media (max-width: 1255px) {
-    /* .ContactCard {
-    display: flex;
-    flex-direction: column;
- 
-} */
 .card{
    
     height: 210px;
@@ -172,10 +167,6 @@ span, a {
         width: 100%;
     }
 
-/* .contactTitle{
-    width: 100%;
-    background-color: red;
-} */
 .ContactCard {
     display: flex;
     flex-direction: column;

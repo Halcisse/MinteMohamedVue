@@ -1,8 +1,10 @@
 <template>
     <header>
         <div class="headerBar">
-            <img src="../assets/eyeLOGO.png" alt="Logo Marabout Tidiane" >
+<div class="logo">
+    <img src="../assets/eyeLOGO.png" alt="Logo Marabout Tidiane" >
             <h1>MARABOUT TIDIANE</h1>
+</div>
             <div class="menu">
                 <router-link :to="{ name: 'Accueil' }">ACCUEIL</router-link>
                 <router-link :to="{ name: 'Prestations' }">PRESTATIONS</router-link>
@@ -22,14 +24,17 @@
  
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 8px;
 
     
 
     
 }
-
+.logo{
+    display: flex;
+    align-items: center;
+}
 h1 {
     letter-spacing: 2px;
     font-size: 19px;
@@ -45,9 +50,10 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 70%;
+    width: 25%;
     font-size: 19px;
     letter-spacing: 2px;
+    margin-right: 25px;
 
  
    

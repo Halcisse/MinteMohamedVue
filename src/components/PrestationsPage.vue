@@ -60,7 +60,7 @@ import ContactBar from '@/views/ContactBar.vue';
     justify-content: center;
     background-color: rgb(14, 2, 63);
     width: 70%;
-    margin-top: 110px;
+    margin-top: 144px;
     margin-bottom: 90px;
 
 }

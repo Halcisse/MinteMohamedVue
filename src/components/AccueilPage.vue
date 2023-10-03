@@ -78,11 +78,11 @@ import ContactBar from '@/views/ContactBar.vue';
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 45px 0;
     background-color: rgb(14, 2, 63);
     color: white;
     letter-spacing: 2px;
-    margin-bottom: 170px;
+    margin-bottom: 90px;
+    margin-top: 35px;
 
 }
 

@@ -28,7 +28,6 @@ const router = createRouter({
       component: () => import('@/components/NotFound.vue'),
     },
 
-  ]
-})
+  ]})
 
 export default router

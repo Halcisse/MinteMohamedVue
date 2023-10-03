@@ -196,7 +196,6 @@ textarea {
     outline: none;
     background: white;
     border-radius: 10px;
-    font-family: 'Satisfy', cursive;
     font-weight: 500;
 }
 
@@ -231,7 +230,6 @@ h3 {
 .errors {
     margin: 0;
     font-size: 14px;
-    /* background-color: aqua; */
     color: rgb(14, 2, 63);
 }
 

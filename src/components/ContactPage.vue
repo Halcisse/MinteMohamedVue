@@ -1,6 +1,6 @@
 <template>
     <div class="ContactContent">
-        <div class="title">
+        <div class="titlecontact">
             <h1>Formulaire</h1>
             <h2>Envoyez un message pour plus d'informations!</h2>
         </div>
@@ -26,14 +26,15 @@ import Formulaire from '@/views/Formulaire.vue';
 
 }
 
-.title {
+.titlecontact {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
     background-color:  rgb(14, 2, 63);
     width: 70%;
-    margin-bottom: 100px;
+
+    margin-top: 144px;
+    margin-bottom: 90px;
 
 }
 
