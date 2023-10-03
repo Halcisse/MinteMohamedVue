@@ -22,6 +22,7 @@
                     <div class="phoneNumber">
                         07.53.79.65.18
                     </div>
+                    
                 </div>
             </a>
          
@@ -34,6 +35,11 @@
            
         </div>
 
+        <div class="whatsapp">
+            <a class="contactBtn" href="https://wa.me/33753796518">
+                <img src="../assets/WhatsAppButtonGreenSmall.png" alt="images contact Whatsapp ">
+            </a>
+        </div>
     </div>
 </template>
 
@@ -49,10 +55,6 @@
     background-position-y: top;
     background-repeat: no-repeat;
     background-size: cover;
-    /* width: 70%; */
- 
-    /* border-bottom: solid 2px rgb(14, 2, 63); */
-
 }
 
 .contactTitle{
@@ -62,7 +64,6 @@
     justify-content: center;
   width: 100%;
     background-color: rgb(14, 2, 63);
-    /* border:1px solid rgb(14, 2, 63) ; */
     margin-bottom: 100px;
 }
 .ContactCard {
@@ -71,7 +72,8 @@
     justify-content: center;
    width: 100%;
     flex-wrap: wrap;
-    /* margin-bottom: 50px; */
+    margin-bottom: 30px;
+   
 }
 
 .card {
@@ -83,8 +85,7 @@
     height: 400px;
     border:1px solid rgb(14, 2, 63) ;
     margin: 20px;
-    /* box-shadow: 10px 5px 5px rgb(14, 2, 63, 0.3); */
-
+ 
 }
 .card:hover{  
       box-shadow: 10px 5px 5px rgb(14, 2, 63);
@@ -92,10 +93,8 @@
 
 h1,
 h2 {
-    /* margin-top: 25px; */
     color: white;
     margin-bottom: 18px;
-
 }
 
 
@@ -109,7 +108,6 @@ p {
 .titleCard {
     color: rgb(14, 2, 63);
     font-size: 24px;
-    
 }
 
 
@@ -121,7 +119,6 @@ a:not(.active, .link) {
     color: rgb(14, 2, 63);
     font-size: 20px;
     letter-spacing: 2px;
-    /* box-shadow: 10px 5px 5px rgb(14, 2, 63, 0.3); */
 }
 
 
@@ -136,7 +133,6 @@ p {
     color: rgb(14, 2, 63);
      font-size: 24px;
     text-decoration: none;
-
 }
 
 span, a {
