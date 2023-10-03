@@ -26,7 +26,7 @@
             <input type="hidden" name="_next" value="http://localhost:5173/">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
-            <button  :disabled="isSubmitting" >Envoyer</button>
+            <button  type="submit" id="submit" >Envoyer</button>
 
         </div>
         <label v-if="msgOk == true" class="msgOk">Le message a été envoyé avec succès </label>
@@ -40,12 +40,13 @@
 import { useField, useForm, } from 'vee-validate'
 import { z } from 'zod'
 import { toTypedSchema } from '@vee-validate/zod'
-import { ref, watch } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref, } from 'vue';
+
 
 
 let msgOk = ref(false)
 let msgKO = ref(false)
+
 
 
 const validationSchema = toTypedSchema(
@@ -70,7 +71,7 @@ const validationSchema = toTypedSchema(
 )
 
 
-const { handleSubmit, isSubmitting } = useForm({
+const { handleSubmit } = useForm({
     validationSchema
 })
 
@@ -81,12 +82,7 @@ const { value: telephoneValue, meta: metaTelephone, errorMessage: telephoneError
 const { value: messageValue, meta: metaMessage, errorMessage: messageError, handleBlur: blurMessage, handleChange: changeMessage } = useField('message', validationSchema, { validateOnValueUpdate: false })
 
 
-// const route = useRoute();
-// console.log(route.params)
-// watch(() => route.params, (newParams) =>{
-// console.log(newParams)
-// })
-const router = useRouter()
+
 
 const sendEmail = handleSubmit( (values, {resetForm}) =>{
   
@@ -97,6 +93,11 @@ const sendEmail = handleSubmit( (values, {resetForm}) =>{
         telephone: values.telephone,
         message: values.message
 }
+//handle btn
+const btn = document.querySelector('#submit') as HTMLButtonElement ;
+    btn.textContent = 'Veuillez patienter'
+    btn.disabled = true;
+
 console.log(formValues)
    //Envoi du formulaire par mail 
      fetch("https://formsubmit.co/ajax/ab56819fb3854d8e5a3cbbff87ba3434", {
@@ -110,14 +111,14 @@ console.log(formValues)
 })
     .then(response => response.json())
     .then(data => 
-{ 
-    if(data.success){
-       msgOk = ref(true), 
-       router.push('../components/AccueilPage.vue')
-
-    resetForm()
-
-} else {
+{     if(data.success){
+       msgOk = ref(true),
+       btn.textContent = 'Merci !'
+       resetForm()
+    
+    }
+     
+else {
     msgKO = ref(true)
 }
     

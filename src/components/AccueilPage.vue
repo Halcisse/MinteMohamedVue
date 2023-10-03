@@ -17,7 +17,7 @@
                  Ces enseignements sont transmis de générations en générations, selon les rites traditionnelles et ancestraux de l'Afrique de l'Ouest.
                 <br><br>
                 Grâce à la précision de mes prédictions et la qualité de mon accompagnement, j'ai su perfectionner mes méthodes au fil des années et ainsi devenir une figure incontournable des marabouts de France.  <br>
-              . <br>
+              <br>
                 Ma vocation me pousse à mettre à disposition mes dons, afin de vous accompagner dans votre épanouissement et votre
                 cheminement vers la paix intérieur.
                 <br> <br> <br>
