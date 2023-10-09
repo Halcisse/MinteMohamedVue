@@ -50,7 +50,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 25%;
+    width: 45%;
     font-size: 19px;
     letter-spacing: 2px;
     margin-right: 25px;
